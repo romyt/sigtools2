@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Gestion d'outils de collecte{% endblock %}
+
+{% block body %}
+
+	<ul id="navigation">
+    	{% for product in products %}
+        	<li> <a href="{{ path ('TohouriStoreBundle_product_show', {'id': product.id}) }}"> {{ product.name }} </a></li>
+    	{% else %}
+			<li>No products found</li>
+		{% endfor %}
+    </ul>
+
+{% endblock %}

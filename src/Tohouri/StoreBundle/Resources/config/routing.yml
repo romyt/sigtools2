@@ -1,0 +1,106 @@
+TohouriStoreBundle_homepage:
+    pattern:  /
+    defaults: { _controller: TohouriStoreBundle:Default:index }
+# routing definition for product entity
+TohouriStoreBundle_product:
+    pattern:  /product
+    defaults: { _controller: TohouriStoreBundle:Product:index }
+
+TohouriStoreBundle_product_new:
+    pattern:  /product/new
+    defaults: { _controller: TohouriStoreBundle:Product:new }
+    
+TohouriStoreBundle_product_delete:
+    pattern:  /product/{id}/delete
+    defaults: { _controller: TohouriStoreBundle:Product:delete }
+
+TohouriStoreBundle_product_show:
+    pattern:  /product/{id}/show
+    defaults: { _controller: TohouriStoreBundle:Product:show }
+
+TohouriStoreBundle_product_edit:
+    pattern:  /product/{id}/edit
+    defaults: { _controller: TohouriStoreBundle:Product:edit }
+
+TohouriStoreBundle_product_create:
+    pattern:  /product/create
+    defaults: { _controller: TohouriStoreBundle:Product:create }
+
+TohouriStoreBundle_product_update:
+    pattern:  /product/{id}/update
+    defaults: { _controller: TohouriStoreBundle:Product:update }
+    
+# routing definition for stock entity
+TohouriStoreBundle_stock:
+    pattern:  /stock
+    defaults: { _controller: TohouriStoreBundle:Stock:index }
+
+TohouriStoreBundle_stock_edit:
+    pattern:  /stock/{id}/edit
+    defaults: { _controller: TohouriStoreBundle:Stock:edit }
+
+TohouriStoreBundle_stock_show:
+    pattern:  /stock/{id}/show
+    defaults: { _controller: TohouriStoreBundle:Stock:show }
+
+TohouriStoreBundle_stock_delete:
+    pattern:  /stock/{id}/delete
+    defaults: { _controller: TohouriStoreBundle:Stock:delete }
+
+TohouriStoreBundle_stock_update:
+    pattern:  /stock/{id}/update
+    defaults: { _controller: TohouriStoreBundle:Stock:update }
+
+TohouriStoreBundle_stock_new:
+    pattern:  /stock/new
+    defaults: { _controller: TohouriStoreBundle:Stock:new }
+
+TohouriStoreBundle_stock_create:
+    pattern:  /stock/create
+    defaults: { _controller: TohouriStoreBundle:Stock:create }
+
+TohouriStoreBundle_stock_add:
+    pattern:  /stock/add
+    defaults: { _controller: TohouriStoreBundle:Stock:addToQuantity }
+        
+# routing definition for category entity
+TohouriStoreBundle_category:
+    pattern:  /category
+    defaults: { _controller: TohouriStoreBundle:Category:index }
+    
+TohouriStoreBundle_category_show:
+    pattern:  /category/{id}/show
+    defaults: { _controller: TohouriStoreBundle:Category:show }
+
+TohouriStoreBundle_category_new:
+    pattern:  /category/new
+    defaults: { _controller: TohouriStoreBundle:Category:new }
+    
+TohouriStoreBundle_category_edit:
+    pattern:  /category/{id}/edit
+    defaults: { _controller: TohouriStoreBundle:Category:edit }
+
+TohouriStoreBundle_category_delete:
+    pattern:  /category/{id}/delete
+    defaults: { _controller: TohouriStoreBundle:Category:delete }
+    
+TohouriStoreBundle_category_update:
+    pattern:  /category/{id}/update
+    defaults: { _controller: TohouriStoreBundle:Category:update }
+    
+TohouriStoreBundle_category_member:
+    pattern:  /category/{id}/member
+    defaults: { _controller: TohouriStoreBundle:Category:categoryMember }
+    
+# routing definition for Cart
+TohouriStoreBundle_cart:
+    pattern:  /cart
+    defaults: { _controller: TohouriStoreBundle:Cart:index }
+    
+TohouriStoreBundle_cart_add:
+    pattern:  /cart/add
+    defaults: { _controller: TohouriStoreBundle:Cart:add }
+    
+TohouriStoreBundle_cart_remove:
+    pattern:  /cart/remove/{id}
+    defaults: { _controller: TohouriStoreBundle:Cart:remove }

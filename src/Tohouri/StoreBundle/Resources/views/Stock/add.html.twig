@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Réceptionner un nouveau stock{% endblock %}
+
+{% block body %}
+
+<h1>Ajouter au stock</h1>
+
+<form action="{{ path('TohouriStoreBundle_stock_add') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <p>
+        <button type="submit">Create</button>
+    </p>
+</form>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('TohouriStoreBundle_stock', {'quantity': stock.quantity}) }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}Welcome to tohouri.com app!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+		{% if app.session.hasFlash('notice') %}
+		<div class="flash-notice">
+		{{ app.session.flash('notice') }}	
+		</div>
+		{% endif %}
+		
+		<div id="sidebar">
+            {% block sidebar %}
+            <ul>
+                <li><a href="{{ path('TohouriStoreBundle_homepage')}}">Home</a></li>
+				<li><a href="{{ path('TohouriStoreBundle_product')}}">Gestion des outils</a></li>
+				<li><a href="{{ path('TohouriStoreBundle_category')}}">Gestion des catégories</a></li>	
+				<li><a href="{{ path('TohouriStoreBundle_stock')}}">Gestion des Stock</a></li>
+				<li><a href="{{ path('TohouriStoreBundle_stock_add')}}">Réceptionner des outils</a></li>
+				<li><a href="{{ path('TohouriStoreBundle_cart_add')}}">Préparer une commande</a></li>				
+            </ul>
+            {% endblock %}
+        </div>
+
+        <div id="content">
+            {% block body %}{% endblock %}
+        </div>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

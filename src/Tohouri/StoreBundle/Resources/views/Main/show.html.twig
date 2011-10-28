@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Gestion d'outils de collecte{% endblock %}
+
+{% block body %}
+<h2>Product details</h2>
+<div>
+<div>id: {{ product.id }}</div>
+<div>Name: {{ product.name }}</div>
+<div>Code: {{ product.code }}</div>
+<div>Description: {{ product.description}}</div>
+<div>Price: {{ product.price }}</div>
+<div>Category: {{ product.category }}</div>
+</div>
+
+{% endblock %}

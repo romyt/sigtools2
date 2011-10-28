@@ -1,0 +1,23 @@
+{% for id, quantity in cart %}
+	<div>
+	{% for product in products %}
+	
+		{% if product.id in [id] %}
+ 			{{ product.name }}
+
+			<span>
+			   	<a title="Remove this item" href="{{ path('TohouriStoreBundle_cart_remove', {'id': id}) }}">
+			 		({{ cart[id] }})
+			    </a>
+			</span>
+		{% endif %}
+		
+	{% endfor %}
+	</div>
+{% else %}
+	nothing yet in your shopping cart.
+{% endfor %}
+<P>
+<div>
+<a href="{{ path('TohouriStoreBundle_cart_add', {'save': 'yes'})}}">Envoyer la commande</a>
+</div>

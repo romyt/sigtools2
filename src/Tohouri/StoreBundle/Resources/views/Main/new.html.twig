@@ -1,0 +1,25 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Création d'un outils de collecte{% endblock %}
+
+{% block body %}
+	{% if app.session.hasFlash('notice') %}
+	<div class="flash-notice">
+	{{ app.session.flash('notice') }}	
+	</div>
+	{% endif %}
+	
+  	<form action="{{ path('TohouriStoreBundle_product_new') }}" method="post" {{ form_enctype(form) }}>
+    	{{ form_errors(form) }}
+
+		{{ form_row(form.name) }}
+		{{ form_row(form.code) }}
+		{{ form_row(form.description) }}
+		{{ form_row(form.price) }}
+		{{ form_row(form.category) }}
+		
+		{{ form_rest(form) }}
+		
+    	<input type="submit" />
+	</form>
+{% endblock %}

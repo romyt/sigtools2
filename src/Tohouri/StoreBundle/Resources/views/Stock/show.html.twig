@@ -1,0 +1,34 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Détail du Stock{% endblock %}
+
+{% block body %}
+
+<h1>Détail du Stock</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Product: </th>
+            <td>{{ stock.product }}</td>
+        </tr>
+        <tr>
+            <th>Quantite: </th>
+            <td>{{ stock.quantity }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('TohouriStoreBundle_stock') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('TohouriStoreBundle_stock_edit', { 'id': stock.id }) }}">
+            Edit
+        </a>
+    </li>
+</ul>
+{% endblock %}
