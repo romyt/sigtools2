@@ -1,0 +1,15 @@
+{% extends "TohouriStoreBundle::layout.html.twig" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+	{% if app.session.hasFlash('notice') %}
+		<div class="flash-notice">
+			{{ app.session.flash('notice') }}	
+		</div>
+	{% endif %}
+	
+{% block fos_user_content %}{% endblock %}
+
+{% endblock %}

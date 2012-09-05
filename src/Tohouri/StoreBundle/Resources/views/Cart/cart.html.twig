@@ -18,6 +18,15 @@
 	nothing yet in your shopping cart.
 {% endfor %}
 <P>
-<div>
-<a href="{{ path('TohouriStoreBundle_cart_add', {'save': 'yes'})}}">Envoyer la commande</a>
-</div>
+	<div id="receiver_list">	   
+
+		<form action="{{ path('TohouriStoreBundle_cart_add') }}" method="post" {{ form_enctype(form2) }}>
+		{{ form_widget(form2) }}
+		 		<p>
+		        	<button type="submit">Expédier la commande</button>
+		    	</p>
+		</form>
+	</div>
+{#<div>
+<a href="{{ path('TohouriStoreBundle_cart_add', {'save': 'yes'})}}">Enregistrer la commande pour modification ultérieure</a>
+</div> #}

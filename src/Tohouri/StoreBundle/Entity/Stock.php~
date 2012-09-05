@@ -22,7 +22,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Tohouri\StoreBundle\Entity\Stock
  *
- * @ORM\Table()
+ * @ORM\Table(name="stock")
  * @ORM\Entity(repositoryClass="Tohouri\StoreBundle\Entity\StockRepository")
  */
 class Stock
@@ -47,7 +47,7 @@ class Stock
 	* @ORM\OneToOne(targetEntity="Product", inversedBy="stock")
 	*/
 	private $product;
-		
+	
     /**
      * Get id
      *
@@ -76,6 +76,26 @@ class Stock
     public function getQuantity()
     {
         return $this->quantity;
+    }
+
+ /**
+     * add to existing quantity
+     *
+     * @return integer 
+     */
+    public function addQuantity($quantity)
+    {
+        return $this->quantity + $quantity;
+    }
+
+  /**
+     * remove to existing quantity
+     *
+     * @return integer 
+     */
+    public function removeQuantity($quantity)
+    {
+        return $this->quantity - $quantity;
     }
 
     /**

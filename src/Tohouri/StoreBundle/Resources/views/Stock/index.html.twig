@@ -1,4 +1,4 @@
-{% extends '::base.html.twig' %}
+{% extends "TohouriStoreBundle::layout.html.twig" %}
 
 {% block title %}Liste des stocks disponibles{% endblock %}
 
@@ -16,7 +16,7 @@
     </thead>
     <tbody>
     {% for stock in stocks %}
-        <tr>
+        <tr class>
             <td><a href="{{ path('TohouriStoreBundle_product_show', { 'id': stock.product.id }) }}">{{ stock.product }}</a></td>
             <td>{{ stock.quantity }}</td>
             <td>

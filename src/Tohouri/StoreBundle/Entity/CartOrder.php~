@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Tohouri\StoreBundle\Entity\CartOrder
  *
- * @ORM\Table()
+ * @ORM\Table(name="cart_order", uniqueConstraints={@ORM\UniqueConstraint(name="uniq_basket", columns={"product_id", "cart_id"})})
  * @ORM\Entity
  */
 class CartOrder
@@ -70,4 +70,44 @@ class CartOrder
         return $this->quantity;
     }
 
+
+    /**
+     * Set product
+     *
+     * @param Tohouri\StoreBundle\Entity\Product $product
+     */
+    public function setProduct(\Tohouri\StoreBundle\Entity\Product $product)
+    {
+        $this->product = $product;
+    }
+
+    /**
+     * Get product
+     *
+     * @return Tohouri\StoreBundle\Entity\Product 
+     */
+    public function getProduct()
+    {
+        return $this->product;
+    }
+
+    /**
+     * Set cart
+     *
+     * @param Tohouri\StoreBundle\Entity\Cart $cart
+     */
+    public function setCart(\Tohouri\StoreBundle\Entity\Cart $cart)
+    {
+        $this->cart = $cart;
+    }
+
+    /**
+     * Get cart
+     *
+     * @return Tohouri\StoreBundle\Entity\Cart 
+     */
+    public function getCart()
+    {
+        return $this->cart;
+    }
 }

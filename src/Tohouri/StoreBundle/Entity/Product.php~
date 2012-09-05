@@ -23,7 +23,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * Tohouri\StoreBundle\Entity\Product
  *
- * @ORM\Table()
+ * @ORM\Table(name="product")
  * @ORM\Entity
  */
 class Product
@@ -72,15 +72,9 @@ class Product
 	protected $category;
 
 	/**
-	* @ORM\OneToOne(targetEntity="Stock", mappedBy="product")
+	* @ORM\OneToOne(targetEntity="Stock", mappedBy="product", cascade={"persist", "remove"})
 	*/
 	private $stock;
-
-	/**
-	 * @ORM\OneToMany(targetEntity="CartOrder", mappedBy="product")
-     */
-    private $cartOrders;
-
 
 
     public function __construct() {
@@ -222,4 +216,24 @@ class Product
         return $this->stock;
     }
 
+
+    /**
+     * Add cartOrders
+     *
+     * @param Tohouri\StoreBundle\Entity\CartOrder $cartOrders
+     */
+    public function addCartOrder(\Tohouri\StoreBundle\Entity\CartOrder $cartOrders)
+    {
+        $this->cartOrders[] = $cartOrders;
+    }
+
+    /**
+     * Get cartOrders
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCartOrders()
+    {
+        return $this->cartOrders;
+    }
 }

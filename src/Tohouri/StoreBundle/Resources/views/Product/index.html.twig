@@ -1,4 +1,4 @@
-{% extends '::base.html.twig' %}
+{% extends "TohouriStoreBundle::layout.html.twig" %}
 
 {% block title %}Liste des produits{% endblock %}
 
@@ -11,8 +11,6 @@
 {{ app.session.flash('notice') }}	
 </div>
 {% endif %}
-
-<h1>Product list</h1>
 
 <table class="records_list">
     <thead>

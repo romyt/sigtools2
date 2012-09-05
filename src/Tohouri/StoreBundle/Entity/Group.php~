@@ -1,0 +1,41 @@
+<?php
+/*
+ * This file is part of SIGTOOLS2.
+ * (c) 20011-2012 TOHOURI Romain-Rolland
+ * http://www.tohouri.com
+ * Tel: +225 03 44 49 44
+ * Email: rtohouri@gmail.com
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+/* Creation: Sun Oct 30 18:43:58 GMT 2011
+ * Class definition: Class that house the logic for building the Group 
+ * Class Path: /src/Tohouri/StoreBundle/entity/Group.php
+ */
+namespace Tohouri\StoreBundle\Entity;
+
+use FOS\UserBundle\Entity\Group as BaseGroup;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table()
+ */
+class Group extends BaseGroup
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\generatedValue(strategy="AUTO")
+     */
+     protected $id;
+
+    /**
+     * @var string $credential
+     *
+     * @ORM\Column(name="credential", type="string", length=255)
+     */
+    private $credential;
+}

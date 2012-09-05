@@ -1,0 +1,42 @@
+{% extends "TohouriStoreBundle::layout.html.twig" %}
+
+{% block title %} Liste des Etablissements sanitaires {% endblock %}
+
+{% block body %}
+
+<h1>Unité d'organisation: {{ entity.name }}</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Nom: </th>
+            <td>{{ entity.name }}</td>
+        </tr>
+        <tr>
+            <th>Addresse: </th>
+            <td>{{ entity.address }}</td>
+        </tr>
+    </tbody>
+</table>
+<P>
+<div>
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('TohouriStoreBundle_orgunit') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('TohouriStoreBundle_orgunit_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('TohouriStoreBundle_orgunit_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
+</div>
+{% endblock %}

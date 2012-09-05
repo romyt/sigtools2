@@ -1,6 +1,6 @@
 TohouriStoreBundle_homepage:
     pattern:  /
-    defaults: { _controller: TohouriStoreBundle:Default:index }
+    defaults: { _controller: TohouriStoreBundle:Stock:index }
 # routing definition for product entity
 TohouriStoreBundle_product:
     pattern:  /product
@@ -104,3 +104,86 @@ TohouriStoreBundle_cart_add:
 TohouriStoreBundle_cart_remove:
     pattern:  /cart/remove/{id}
     defaults: { _controller: TohouriStoreBundle:Cart:remove }
+
+TohouriStoreBundle_cart_removeAll:
+    pattern:  /cart/empty
+    defaults: { _controller: TohouriStoreBundle:Cart:removeAll }
+        
+# routing definition for OrganisationUnit
+TohouriStoreBundle_orgunit:
+    pattern:  /orgunit
+    defaults: { _controller: TohouriStoreBundle:OrganisationUnit:index }
+    
+TohouriStoreBundle_orgunit_show:
+    pattern:  /orgunit/{id}/show
+    defaults: { _controller: TohouriStoreBundle:OrganisationUnit:show }
+
+TohouriStoreBundle_orgunit_new:
+    pattern:  /orgunit/new
+    defaults: { _controller: TohouriStoreBundle:OrganisationUnit:new }
+    
+TohouriStoreBundle_orgunit_create:
+    pattern:  /orgunit/create
+    defaults: { _controller: TohouriStoreBundle:OrganisationUnit:create }    
+        
+TohouriStoreBundle_orgunit_edit:
+    pattern:  /orgunit/{id}/edit
+    defaults: { _controller: TohouriStoreBundle:OrganisationUnit:edit }
+
+TohouriStoreBundle_orgunit_delete:
+    pattern:  /orgunit/{id}/delete
+    defaults: { _controller: TohouriStoreBundle:OrganisationUnit:delete }
+    
+TohouriStoreBundle_orgunit_update:
+    pattern:  /orgunit/{id}/update
+    defaults: { _controller: TohouriStoreBundle:OrganisationUnit:update }
+    
+TohouriStoreBundle_orgunit_member:
+    pattern:  /orgunit/{id}/user
+    defaults: { _controller: TohouriStoreBundle:Category:organisationUnitUsers }
+
+# routing definition for Shipping
+TohouriStoreBundle_shipping:
+  pattern:  /shipping
+  defaults: { _controller: TohouriStoreBundle:Shipping:index }
+
+TohouriStoreBundle_shipping_show:
+  pattern:  /shipping/{id}/show
+  defaults: { _controller: TohouriStoreBundle:shipping:show }
+
+#FOSUserBundle definitions
+fos_user_security:
+  resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+  resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+  prefix: /profile
+
+fos_user_register:
+  resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+  prefix: /register
+
+fos_user_resetting:
+  resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+  prefix: /resetting
+
+fos_user_change_password:
+  resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+  prefix: /change-password
+ 
+fos_user_group:
+  resource: "@FOSUserBundle/Resources/config/routing/group.xml"
+  prefix: /credential
+
+# admin routes
+TohouriStoreBundle_acteur_ajouter:
+  pattern: /admin/acteur/ajouter
+  defaults: { _controller: TohouriStoreBundle:Acteur:editer }
+  
+TohouriStoreBundle_acteur_modifier:
+  pattern: /admin/acteur/modifier/{id}
+  defaults: { _controller: TohouriStoreBundle:Acteur:editer }
+  
+TohouriStoreBundle_acteur_supprimer:
+  pattern: /admin/acteur/supprimer/{id}
+  defaults: { _controller: TohouriStoreBundle:Acteur:supprimer }

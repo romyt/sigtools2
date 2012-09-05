@@ -1,4 +1,4 @@
-{% extends '::base.html.twig' %}
+{% extends "TohouriStoreBundle::layout.html.twig" %}
 
 {% block title %}Réceptionner un nouveau stock{% endblock %}
 
@@ -9,7 +9,7 @@
 <form action="{{ path('TohouriStoreBundle_stock_add') }}" method="post" {{ form_enctype(form) }}>
     {{ form_widget(form) }}
     <p>
-        <button type="submit">Create</button>
+        <button type="submit">Add</button>
     </p>
 </form>
 

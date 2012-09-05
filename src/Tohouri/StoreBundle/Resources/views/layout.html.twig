@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		{% block stylesheets %}
+			<link rel="stylesheet" href="{{ asset('bundles/tohouristore/css/layout.css') }}" type="text/css" media="all" />
+		{% endblock %}
+        <title>
+			{% block title %}
+				SIGTOOL
+			{% endblock %}	
+		</title>
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div id="symfony-wrapper">
+            <div id="symfony-header">
+				<div id="connexion">
+				    {% include "TohouriUsersBundle::connexion.html.twig" %}
+				</div>
+	        <div>
+            {% if app.session.flash('notice') %}
+                <div class="flash-message">
+                    <em>Notice</em>: {{ app.session.flash('notice') }}
+                </div>
+            {% endif %}
+
+            {% block content_header %}
+                <ul id="menu">
+                    {% block content_header_more %}
+                        <li><a href="{{ path('TohouriStoreBundle_homepage') }}">Accueil</a></li>
+						<li><a href="{{ path('TohouriStoreBundle_product')}}">Gestion des outils</a></li>
+						<li><a href="{{ path('TohouriStoreBundle_category')}}">Gestion des catégories</a></li>	
+						<li><a href="{{ path('TohouriStoreBundle_stock')}}">Gestion des Stocks</a></li>
+						<li><a href="{{ path('TohouriStoreBundle_stock_add')}}">Réceptionner des outils</a></li>
+						<li><a href="{{ path('TohouriStoreBundle_cart_add')}}">Commande</a></li>
+						<li><a href="{{ path('TohouriStoreBundle_orgunit')}}">Ets</a></li>	
+                    {% endblock %}
+                </ul>
+				{% block sub_menue %}
+				{% endblock sub_menue %}
+                <div style="clear: both"></div>
+            {% endblock %}
+
+            <div class="symfony-content">
+                {% block content %}
+					   <div id="content">
+							{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+				            	{% block body %}
+								{% endblock %}
+							{% else %}
+					            <P>Cliquez sur <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a> pour vous authentifier.</P>
+					        {% endif %}
+				        </div>
+				        {% block javascripts %}{% endblock %}
+						 {% block fos_user_content %}
+				         {% endblock fos_user_content %}
+                {% endblock %}
+            </div>
+
+			<div id="sidebar">
+	            {% block sidebar %}
+		
+	            {% endblock %}
+	        </div>	     
+            {% if code is defined %}
+                <h2>Code behind this page</h2>
+                <div class="symfony-content">{{ code|raw }}</div>
+            {% endif %}
+        </div>
+		<div id="footer" align="center">
+                <img src="{{ asset('bundles/tohouristore/images/PEPFAR.png') }}" width=100 height=90 alt="PEPFAR" />
+				<img src="{{ asset('bundles/tohouristore/images/USAID.png') }}" alt="USAID" />
+				<img src="{{ asset('bundles/tohouristore/images/MEASURE.png') }}" alt="MEASURE"  />
+		</div>
+    </body>
+</html>

@@ -23,7 +23,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Tohouri\StoreBundle\Entity\Category
  *
- * @ORM\Table()
+ * @ORM\Table(name="category")
  * @ORM\Entity
  */
 class Category

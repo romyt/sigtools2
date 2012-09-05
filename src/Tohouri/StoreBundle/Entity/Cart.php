@@ -29,12 +29,12 @@ namespace Tohouri\StoreBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
-
 /**
- * Tohouri\StoreBundle\Entity\Cart
+ * Tohouri\StoreBundle\Entity\cart
  *
- * @ORM\Table()
+ * @ORM\Table(name="cart")
  * @ORM\Entity()
+ * @ORM\HasLifecycleCallbacks()
  */
 
 class Cart
@@ -65,7 +65,19 @@ class Cart
 	/**
 	 * @ORM\OneToMany(targetEntity="CartOrder", mappedBy="cart", cascade={"persist", "remove"})
      */
-    private $cartOrders;
+    private $cartOrder;
+
+	/**
+	 *
+     * @ORM\Column(name="created", type="datetime")
+	 *
+	 */
+	protected $created;
+	
+	/**
+	 * @ORM\OneToMany(targetEntity="Shipping", mappedBy="cart", cascade={"persist", "remove"})
+     */
+    private $shipping;
 
 	
  	public function __construct($session)
@@ -101,7 +113,12 @@ class Cart
 
 	    $this->session->set('cart', $cart);
 	}
-
+	public function removeAllItem($id)
+	{
+	    $cart = $this->getSessionCart();
+	    unset($cart[$id]);
+	    $this->session->set('cart', $cart);
+	}
 	public function getSessionCart()
 	{
 		return $this->session->get('cart', array());
@@ -137,23 +154,81 @@ class Cart
         return $this->sessionId;
     }
 
+	/**
+	 * @ORM\prePersist
+	 */
+	public function setCreatedValue()
+	{
+	    $this->created = new \DateTime();
+	}
+
     /**
-     * Add cartOrders
+     * Set created
      *
-     * @param Tohouri\StoreBundle\Entity\CartOrder $cartOrders
+     * @param datetime $created
      */
-    public function addCartOrder(\Tohouri\StoreBundle\Entity\CartOrder $cartOrders)
+    public function setCreated($created)
     {
-        $this->cartOrders[] = $cartOrders;
+        $this->created = $created;
     }
 
     /**
-     * Get cartOrders
+     * Get created
+     *
+     * @return datetime 
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set shipping
+     *
+     * @param Tohouri\StoreBundle\Entity\Shipping $shipping
+     */
+    public function setShipping(\Tohouri\StoreBundle\Entity\Shipping $shipping)
+    {
+        $this->shipping = $shipping;
+    }
+
+    /**
+     * Get shipping
+     *
+     * @return Tohouri\StoreBundle\Entity\Shipping 
+     */
+    public function getShipping()
+    {
+        return $this->shipping;
+    }
+
+    /**
+     * Add cartOrder
+     *
+     * @param Tohouri\StoreBundle\Entity\CartOrder $cartOrder
+     */
+    public function addCartOrder(\Tohouri\StoreBundle\Entity\CartOrder $cartOrder)
+    {
+        $this->cartOrder[] = $cartOrder;
+    }
+
+    /**
+     * Get cartOrder
      *
      * @return Doctrine\Common\Collections\Collection 
      */
-    public function getCartOrders()
+    public function getCartOrder()
     {
-        return $this->cartOrders;
+        return $this->cartOrder;
+    }
+
+    /**
+     * Add shipping
+     *
+     * @param Tohouri\StoreBundle\Entity\Shipping $shipping
+     */
+    public function addShipping(\Tohouri\StoreBundle\Entity\Shipping $shipping)
+    {
+        $this->shipping[] = $shipping;
     }
 }
