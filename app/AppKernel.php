@@ -20,6 +20,9 @@ class AppKernel extends Kernel
             new Acme\HelloBundle\AcmeHelloBundle(),
             new Acme\StoreBundle\AcmeStoreBundle(),
             new Tohouri\StoreBundle\TohouriStoreBundle(),
+			new FOS\UserBundle\FOSUserBundle(),
+            new Tohouri\UploadBundle\TohouriUploadBundle(),
+            new Tohouri\UsersBundle\TohouriUsersBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
