@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Tohouri\StoreBundle\Entity\Shipping;
+use Tohouri\StoreBundle\Entity\Type\Shipping;
 
 /**
  * Shipping controller.

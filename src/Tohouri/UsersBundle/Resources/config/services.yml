@@ -1,0 +1,12 @@
+services:
+  tohouri_user.profile.form.type:
+    class: Tohouri\UsersBundle\Form\Type\ProfileFormType
+    arguments: [%fos_user.model.user.class%]
+    tags:
+      - { name: form.type, alias: tohouri_user_profile }
+
+  tohouri_user.registration.form.type:
+    class: Tohouri\UsersBundle\Form\Type\RegistrationFormType
+    arguments: [%fos_user.model.user.class%]
+    tags:
+      - { name: form.type, alias: tohouri_user_registration }

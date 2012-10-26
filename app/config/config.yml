@@ -4,7 +4,7 @@ imports:
 
 framework:
     #esi:             ~
-    #translator:      { fallback: %locale% }
+    #translator:      { fallback: %locale%}
     secret:          %secret%
     charset:         UTF-8
     router:          { resource: "%kernel.root_dir%/config/routing.yml" }
@@ -15,9 +15,9 @@ framework:
     session:
         default_locale: %locale%
         auto_start:     true
-    translator: ~
+    translator: { fallback: fr}
 
-# Twig Configuration
+# Twig 
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
@@ -64,29 +64,17 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb'
     firewall_name: main
     user_class: Tohouri\UsersBundle\Entity\User
-    registration:
-        confirmation:
-            from_email: # Use this node only if you don't want the global email address for the confirmation email
-                address:        ...
-                sender_name:    ...
-            enabled:    false # change to true for required email confirmation
-            template:   FOSUserBundle:Registration:email.txt.twig
-        form:
-            type:               tohouri_user_registration
-            handler:            fos_user.registration.form.handler.default
-            name:               tohouri_user_registration
-            validation_groups:  [Registration]
     use_listener:           true
     use_username_form_type: true
     model_manager_name:     null  # change it to the name of your entity/document manager if you don't want to use the default one.
     from_email:
         address:        romain@tohouri.com
-        sender_name:    Admin
+        sender_name:    Sigtools Admin
     profile:
         form:
-            type:               fos_user_profile
+            type:               tohouri_user_profile
             handler:            fos_user.profile.form.handler.default
-            name:               fos_user_profile_form
+            name:               tohouri_user_profile
             validation_groups:  [Profile]
     change_password:
         form:
@@ -94,6 +82,20 @@ fos_user:
             handler:            fos_user.change_password.form.handler.default
             name:               fos_user_change_password_form
             validation_groups:  [ChangePassword]
+            
+    registration:
+        confirmation:
+            from_email: # Use this node only if you don't want the global email address for the confirmation email
+                address:        DIPE Angré 8eme Tranche
+                sender_name:    SIGTOOL Admin
+            enabled:    false # change to true for required email confirmation
+            template:   FOSUserBundle:Registration:email.txt.twig
+        form:
+            type:               tohouri_user_registration
+            handler:            fos_user.registration.form.handler.default
+            name:               tohouri_user_registration
+            validation_groups:  [Registration]
+            
     resetting:
         token_ttl: 86400
         email:

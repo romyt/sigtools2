@@ -79,6 +79,10 @@ class Cart
      */
     private $shipping;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Tohouri\UsersBundle\Entity\User", inversedBy="carts", cascade={"persist", "remove"})
+     */
+    private $user;
 	
  	public function __construct($session)
 	{
@@ -230,5 +234,25 @@ class Cart
     public function addShipping(\Tohouri\StoreBundle\Entity\Shipping $shipping)
     {
         $this->shipping[] = $shipping;
+    }
+
+    /**
+     * Set user
+     *
+     * @param Tohouri\UsersBundle\Entity\User $user
+     */
+    public function setUser(\Tohouri\UsersBundle\Entity\User $user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * Get user
+     *
+     * @return Tohouri\UsersBundle\Entity\User 
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

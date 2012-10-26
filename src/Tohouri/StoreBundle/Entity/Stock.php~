@@ -44,9 +44,17 @@ class Stock
     private $quantity;
 
 	/**
-	* @ORM\OneToOne(targetEntity="Product", inversedBy="stock")
+	* @ORM\ManyToOne(targetEntity="Product", inversedBy="stocks")
+	* @ORM\JoinColumn(name="product_id", referencedColumnName="id")
 	*/
 	private $product;
+	
+	/**
+	* @ORM\ManyToOne(targetEntity="OrganisationUnit", inversedBy="stocks")
+	* @ORM\JoinColumn(name="organisationunit_id", referencedColumnName="id")
+	*/
+	private $organisationunit;
+	
 	
     /**
      * Get id
@@ -120,4 +128,24 @@ class Stock
 
 
 
+
+    /**
+     * Set organisationunit
+     *
+     * @param Tohouri\StoreBundle\Entity\OrganisationUnit $organisationunit
+     */
+    public function setOrganisationunit(\Tohouri\StoreBundle\Entity\OrganisationUnit $organisationunit)
+    {
+        $this->organisationunit = $organisationunit;
+    }
+
+    /**
+     * Get organisationunit
+     *
+     * @return Tohouri\StoreBundle\Entity\OrganisationUnit 
+     */
+    public function getOrganisationunit()
+    {
+        return $this->organisationunit;
+    }
 }

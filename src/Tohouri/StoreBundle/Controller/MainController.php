@@ -23,7 +23,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Tohouri\StoreBundle\Entity\Product;
 use Tohouri\StoreBundle\Entity\Category;
 use Tohouri\StoreBundle\Form\ProductType;
-use Tohouri\StoreBundle\Form\CategoryType;
+use Tohouri\StoreBundle\Form\Type\CategoryType;
 
 class MainController extends Controller
 {

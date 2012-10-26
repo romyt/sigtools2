@@ -1,0 +1,115 @@
+{% extends "TohouriStoreBundle::layout.html.twig" %}
+
+{% block title %}Aide{% endblock %}
+
+{% block left %}
+
+{% endblock %}
+
+{% block body %}
+
+        <a href="{{ path('TohouriStoreBundle_aide_pageAccueil') }}" title="{{ "page_accueil" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-5.png')}}" width="60px" height="30px">
+        </a>
+	
+<a href="{{ path('TohouriStoreBundle_aide_creationCompte') }}" title="{{ "creation_compte" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-6.png')}}" width="60px" height="30px"align="right" >
+        </a>
+<fieldset> 
+     <legend align="center"><h1>{{ "composition_menu" | trans }} </h1></legend>
+	 
+
+     <table class="di">
+	 <tr class="di">
+	 <td class="di">
+{{ "composition_menu1" | trans }}
+
+ <i>A{{ "composition_menu2" | trans }}</i></br></br>
+ 
+<div align="center"><img src="{{ asset('bundles/tohouristore/images/img/menu.JPG')}}"></div>
+
+ <ol>
+ <li><b> {{ "composition_menu3" | trans }}</b></li>
+ 
+ <div align="center"><img src="{{ asset('bundles/tohouristore/images/img/menuaccueil.JPG')}}"></div></br></br>
+ 
+{{ "composition_menu4" | trans }}</br></br>
+
+ <li> <b>{{ "composition_menu5" | trans }}</b></li>
+ 
+ <div align="center"><img src="{{ asset('bundles/tohouristore/images/img/menuadministration.JPG')}}"></div></br></br>
+ 
+{{ "composition_menu6" | trans }}</br></br>
+  <ul>
+  <li><img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "composition_menu7" | trans }}</li>
+  
+  {{ "composition_menu8" | trans }} <i></i>
+  
+  <div align="center"><img src="{{ asset('bundles/tohouristore/images/img/sousmenugestion.JPG')}}"></div></br></br>
+  
+  <li><img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "composition_menu9" | trans }}</li>
+  
+  <li><img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "composition_menu10" | trans }}</li>
+  
+  <li><img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "composition_menu11" | trans }}</li>
+  </ul>
+  
+ <li> <b>{{ "composition_menu12" | trans }}</b></li>
+ 
+ <div align="center"><img src="{{ asset('bundles/tohouristore/images/img/menuservices.JPG')}}"></div></br>
+ 
+ {{ "composition_menu13" | trans }}</br> </br>
+ <ul>
+ <li><img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "composition_menu14" | trans }}</li>
+ 
+ <li><img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "composition_menu15" | trans }}</li>
+ 
+ <li><img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "composition_menu16" | trans }}</li>
+ 
+ <li><img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "composition_menu28" | trans }}</li>
+ </ul>
+ <li> <b>{{ "composition_menu17" | trans }}</b></li> 
+ Ce menu contient toutes les opérations effectuées par un utilisateur durant une période. {{ "composition_menu18" | trans }}</br></br>
+ 
+<img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "composition_menu19" | trans }}</br>
+
+<img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "composition_menu20" | trans }} </br>
+
+<img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "composition_menu26" | trans }}</br>
+
+<img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "composition_menu21" | trans }}</br>
+
+<img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "composition_menu22" | trans }}</br> 
+
+{{ "composition_menu23" | trans }}</br></br>
+ 
+ <li><b>{{ "composition_menu24" | trans }}</b></li>
+ 
+ {{ "composition_menu25" | trans }}</br> </br>
+ 
+<img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "composition_menu26" | trans }}</br>
+
+<img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "composition_menu27" | trans }}</br>
+
+<div align="center"><img src="{{ asset('bundles/tohouristore/images/img/menuaide.JPG')}}"></div>
+ </ol>
+
+
+    </td>
+	</tr>
+	</table>
+
+</fieldset>
+
+        <a href="{{ path('TohouriStoreBundle_aide_pageAccueil') }}" title="{{ "page_accueil" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-5.png')}}" width="60px" height="30px">
+        </a>
+	
+<a href="{{ path('TohouriStoreBundle_aide_creationCompte') }}" title="{{ "creation_compte" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-6.png')}}" width="60px" height="30px"align="right" >
+        </a>
+
+{% endblock %}
+{% block right %}
+
+{% endblock %}

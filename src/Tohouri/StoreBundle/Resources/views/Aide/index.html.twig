@@ -1,0 +1,55 @@
+{% extends "TohouriStoreBundle::layout.html.twig" %}
+
+{% block title %}Aide{% endblock %}
+
+{% block left %}
+
+{% endblock %}
+
+{% block body %}
+
+
+       <div align="right"> <a href="{{ path('TohouriStoreBundle_aide_premiereUtilisation') }}" title="{{ "index" | trans }}" align="right">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-6.png')}}" width="60px" height="30pxalign=right" ></a>
+		
+<fieldset> 
+     <legend align="center"><h1> {{ "index14" | trans }}</h1></legend>
+	 
+
+     <table class="di">
+	 <tr class="di">
+	 <td class="di">
+	 	 	{{ "index12" | trans }}
+    <h4>
+	   <ul>
+	   	<a href="{{ path('TohouriStoreBundle_aide_premiereUtilisation') }}" title="{{ "index13" | trans }}">
+            <img src="{{ asset('bundles/tohouristore/images/opensource/acroread.png')}}" class="PDFlogo"></a>
+	           <li> <a href="{{ path('TohouriStoreBundle_aide_premiereUtilisation') }}"><img src="{{                                    asset('bundles/tohouristore/images/opensource/dialog-accept-2.png')}}"> {{ "index" | trans }}</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide_phaseAuthentification') }}"><img src="{{                                    asset('bundles/tohouristore/images/opensource/dialog-accept-2.png')}}"> {{ "index1" | trans }}</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide_creationCompte') }}"><img src="{{                                    asset('bundles/tohouristore/images/opensource/dialog-accept-2.png')}}"> {{ "index2" | trans }}</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide_pageAccueil') }}"><img src="{{                                    asset('bundles/tohouristore/images/opensource/dialog-accept-2.png')}}"> {{ "index3" | trans }}</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide_menu') }}"><img src="{{                                    asset('bundles/tohouristore/images/opensource/dialog-accept-2.png')}}"> {{ "index4" | trans }}</a> </li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide_manipulationOutil') }}"><img src="{{                                    asset('bundles/tohouristore/images/opensource/dialog-accept-2.png')}}"> {{ "index5" | trans }} </a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide_nouvelleCategorie') }}"><img src="{{                                    asset('bundles/tohouristore/images/opensource/dialog-accept-2.png')}}"> {{ "index6" | trans }}</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide_nouvelOutil') }}"><img src="{{                                    asset('bundles/tohouristore/images/opensource/dialog-accept-2.png')}}"> {{ "index7" | trans }}</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide_nouvelEts') }}"><img src="{{                                  asset('bundles/tohouristore/images/opensource/dialog-accept-2.png')}}"> {{ "index8" | trans }}</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide_commandeOutil') }}"><img src="{{                                    asset('bundles/tohouristore/images/opensource/dialog-accept-2.png')}}"> {{ "index9" | trans }}</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide_receptionOutil') }}"><img src="{{                                    asset('bundles/tohouristore/images/opensource/dialog-accept-2.png')}}"> {{ "index10" | trans }}</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide_livraisonOutil') }}"><img src="{{                                    asset('bundles/tohouristore/images/opensource/dialog-accept-2.png')}}"> {{ "index11" | trans }}</a></li>
+
+          </ul>
+	 </h4>
+
+    </td>
+	</tr>
+	</table>
+
+</fieldset>
+
+       <div align="right"> <a href="{{ path('TohouriStoreBundle_aide_premiereUtilisation') }}" title="{{ "index" | trans }}" align="right">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-6.png')}}" width="60px" height="30pxalign=right" ></a>
+		
+{% endblock %}
+{% block right %}
+
+{% endblock %}

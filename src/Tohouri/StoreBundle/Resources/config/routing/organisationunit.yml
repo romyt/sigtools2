@@ -1,0 +1,30 @@
+TohouriStoreBundle_orgunit:
+    pattern:  /
+    defaults: { _controller: "TohouriStoreBundle:OrganisationUnit:index" }
+
+TohouriStoreBundle_orgunit_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TohouriStoreBundle:OrganisationUnit:show" }
+
+TohouriStoreBundle_orgunit_new:
+    pattern:  /new
+    defaults: { _controller: "TohouriStoreBundle:OrganisationUnit:new" }
+
+TohouriStoreBundle_orgunit_create:
+    pattern:  /create
+    defaults: { _controller: "TohouriStoreBundle:OrganisationUnit:create" }
+    requirements: { _method: post }
+
+TohouriStoreBundle_orgunit_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TohouriStoreBundle:OrganisationUnit:edit" }
+
+TohouriStoreBundle_orgunit_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TohouriStoreBundle:OrganisationUnit:update" }
+    requirements: { _method: post }
+
+TohouriStoreBundle_orgunit_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TohouriStoreBundle:OrganisationUnit:delete" }
+    requirements: { _method: post }

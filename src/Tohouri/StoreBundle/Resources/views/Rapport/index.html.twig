@@ -1,0 +1,40 @@
+{% extends "TohouriStoreBundle::layout.html.twig" %}
+
+{% block title %}Liste des differentes opérations{% endblock %}
+
+{% block body %}
+
+<fieldset> 
+     <legend align="center"><h1>{{ "rapport1" | trans }} </h1></legend>
+
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>{{ "rapport2" | trans }}</th> 
+            <th> {{ "rapport3" | trans }}</th>
+            <th>{{ "rapport4" | trans }}</th>
+            <th>{{ "rapport8" | trans }}</th>
+            <th>{{ "rapport5" | trans }}</th>
+            <th>{{ "rapport6" | trans }}</th>
+            <th>{{ "rapport7" | trans }}</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+          
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+</fieldset>
+<ul>
+    <li>
+        <a href="{{ path('TohouriStoreBundle_stock_new') }}">
+            <button type="submit">{{ "creer_entite" | trans }}</button>
+        </a>
+    </li>
+</ul>
+{% endblock %}

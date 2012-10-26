@@ -65,7 +65,7 @@ class OrganisationUnit
     private $parent;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Tohouri\UsersBundle\Entity\User", mappedBy="organisationunits", cascade={"persist", "remove"})
+     * @ORM\ManyToMany(targetEntity="Tohouri\UsersBundle\Entity\User")
      */
     private $users;
 
@@ -197,9 +197,9 @@ class OrganisationUnit
     /**
      * Add users
      *
-     * @param Tohouri\StoreBundle\Entity\User $users
+     * @param Tohouri\UsersBundle\Entity\User $users
      */
-    public function addUser(\Tohouri\StoreBundle\Entity\User $users)
+    public function addUser(\Tohouri\UsersBundle\Entity\User $users)
     {
         $this->users[] = $users;
     }

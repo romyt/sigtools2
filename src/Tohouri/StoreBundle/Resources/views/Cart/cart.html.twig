@@ -1,5 +1,6 @@
 {% for id, quantity in cart %}
 	<div>
+	
 	{% for product in products %}
 	
 		{% if product.id in [id] %}
@@ -8,6 +9,7 @@
 			<span>
 			   	<a title="Remove this item" href="{{ path('TohouriStoreBundle_cart_remove', {'id': id}) }}">
 			 		({{ cart[id] }})
+					
 			    </a>
 			</span>
 		{% endif %}
@@ -15,18 +17,34 @@
 	{% endfor %}
 	</div>
 {% else %}
-	nothing yet in your shopping cart.
+
+     {{ "commandeOutil7" | trans }}
+	
+	
+	
 {% endfor %}
 <P>
 	<div id="receiver_list">	   
-
-		<form action="{{ path('TohouriStoreBundle_cart_add') }}" method="post" {{ form_enctype(form2) }}>
-		{{ form_widget(form2) }}
+     
+	 <div align="center">
+	<form action="{{ path('TohouriStoreBundle_cart_add') }}" method="post" {{ form_enctype(form2) }}>
+	<table class="tabledim">
+      
+	  <tr class="couleur">
+        <td class="couleur">{{ form_label(form2.organisationunit) }}</td>
+        <td class="couleur">{{ form_errors(form2.organisationunit) }}
+                            {{ form_widget(form2.organisationunit) }}
+		</td>
+	  </tr>
+  </table>
+  
+           {{ form_rest(form2) }}
 		 		<p>
-		        	<button type="submit">Expédier la commande</button>
+		        	<button type="submit">{{ "envoyer" | trans }}</button>
 		    	</p>
 		</form>
 	</div>
-{#<div>
-<a href="{{ path('TohouriStoreBundle_cart_add', {'save': 'yes'})}}">Enregistrer la commande pour modification ultérieure</a>
-</div> #}
+	</div>
+<div align="left">
+<a href="{{ path('TohouriStoreBundle_cart_add', {'save': 'yes'})}}"><button type="submit">{{ "envoyer" | trans }}</button></a>
+</div>

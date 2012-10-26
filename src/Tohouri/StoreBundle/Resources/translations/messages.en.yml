@@ -1,0 +1,653 @@
+choisir_langue: Select Language 
+
+  #traduction de la	 page d'accueil
+Welcome: Welcome
+Welcome.texte: SIGTOOLS is a web application developed by MEAUSRE Evaluation JSI/Côte d'Ivoire in order to help the MoH manage, dispatch   and evaluate the number of paper forms to be print according to health facilities needs.The tool is web based in order to allow all regions in the country to define they own needs in terms of paper collection forms distribution. MoH, Regions or districts are able to order data collection forms and are also able to distribute the received to the facilities in their respective catchment area. The orders are recorded in the online database, where DIPE can see how many papers tools need to be print and how many needs to be sent to which health region, district or facility.
+
+#traduction des menus
+accueil: Home
+administration: Adminstration
+services: Services
+rapport: report
+aide: Help
+gestion_utlisateurs: User
+profile_utilisateur: Profil
+parametre_utilisateur: User parameters
+nouvel_utlisateur: Creat new User
+gestion_categorie: Category
+gestion_ets: Organisation Unit
+gestion_outils: Product
+commande_outil: Cart 
+reception_outil: Shipping
+livraison_outil: delivery
+gestion_stock: Stocks
+manuel: user manual
+message: Mail
+resume: summary
+
+
+#traduction des titres des tableaux
+id: Id
+name: Name
+description: Descriptions
+action: Actions
+ets: Organisation Unit
+produit: Products
+event: Events
+date: Date
+detail: Details
+adresse: Address
+code: Code
+price: Price
+categorie: Category
+quantite: Quantity
+expedier: Shipped
+etablir: Created
+parent: Parent
+enfant: Children
+
+
+#traduction de la page Utilisateur
+reference: User references
+utilisateur: User
+nouvel_utilisayeur: Create User
+
+
+#tradition de la page gestion des catégorie
+montrer: Show
+editer: Edit
+creer_entite: Create a new entry
+supprimer: Delete
+outil_categorie: Category member
+liste_categorie: Category List
+categorie: Category
+retour: Back to the list
+retour_categorie: Back to the Category list
+nouvelle_categorie: New Category
+editer_categorie: Category Edit
+produit_categorie: Category Product
+
+
+# traduction de la page de gestion des outils
+detail_produit: Product Detail List
+nouveau_produit: New product
+list_produit: Product List
+editer_produit: Product Edit
+retour_list: Back detail list
+
+
+#traduction de la page de gestion des Ets
+orgaunit_edit: OrganisationUnit edit
+orgaunit: Organisation Unit
+orgaunit_create: Create Organisation Unit
+
+
+
+#traduction de la page de commaded'outils
+envoyer: Submit
+entrepot: Warehouses collection tools
+commande: Ordering
+ajouter: Add Tools
+panier: CART
+detail_stock: Stock detail
+nouveau_stock: Create new Stock
+stock_dispo: Stock list
+inventaire: Stock Summary
+ajouter_stock: Add Sock 
+
+
+  #traduction de la page d'aide
+
+
+#index
+
+index: First use of the application
+
+index1: Authentication phase
+
+index2: User account creation
+
+index3: Home page
+
+index4: The composition of the different menus
+
+index5: Process of manipulating tools
+
+index6: How to create or add a new category?
+
+index7: How to create or add a new tool?
+
+index8: How to create or add a new establishment?
+
+index9: How to order tools?
+
+index10: How to make receipt of tools?
+
+index11: How to make the delivery tools
+
+index12: Click on PDF piture to danwload user book
+
+index13: PDF version
+
+index14: User Book
+
+index15:
+
+indes16:
+
+index17:
+
+index18:
+
+
+#premiere_utilisation
+premiere_utilisation: First use of the application
+
+premiere_utilisation1: SIGTOOLS is a web application developed by MEAUSRE evaluation JSI / Côte d'Ivoire to help the Ministry of Health and    the Fight against AIDS (MSLS) to manage, ship and evaluate the number of tools to print according the needs of health care facilities. The tool is web-based so that all parts of the country to define their own needs in terms of distribution of forms collection tools. The Ministry of Health, regions or districts will be able to order tools for data collection and will also be able to distribute in their respective coverage area. Commands are stored in the database online, where DIPE can see how tools should be printed and how much should be sent to any health region, district or health facility. To do this, different users have to be previously registered in the database to authenticate in order to access the different benefits of the application.
+
+
+premiere_utilisation2: So how could we save the database online?
+
+premiere_utilisation3: To ensure a thorough testing of different operations performed on the application, three types of users were identified. 
+
+premiere_utilisation4: Users with the SUPER-ADMIN
+
+premiere_utilisation5: These are the users at the central level. That is to say, users of DIPE, DGS, and PNPEC. These guys have all the  rights to use. They have the right to consult, advise, criticize, reduce, increase or eliminate rights USER ADMIN. In a word SUPER ADMIN have a right to "no limit".
+
+premiere_utilisation6: Users with the right-ADMIN USER
+
+premiere_utilisation7: Users with the right-USER ADMIN users are region or district level. These users have local administrative rights. They have the opportunity to see so check out all the operations that take place in their respective coverage areas. These rights are assigned by the users at the central level. This would mean that the USER ADMIN are created by the SUPER ADMIN
+
+premiere_utilisation8: Users have the right to USER
+
+premiere_utilisation9: These are the users of different health institutions. They are created by the USER ADMIN. The USER depend absolutely on-ADMIN.
+
+premiere_utilisation10:
+
+
+#phase_authentification
+
+phase_authentification: Authentication Phase
+
+phase_authentification1: Important Note:
+
+phase_authentification2: Access to the application is always through the Internet and a web browser. Without the presence of these two services access to the application is not possible because the application is a web application (found on internet).
+
+phase_authentification3: Example of a web browser:
+
+phase_authentification4: After the launch of our favorite browser and that we put the address of the application, we access a page: the authentication page. It is the gateway to the application. In other words, the welcome page. At this stage, all you need to do is to authenticate to continue our tour. Otherwise, we can not admire this beautiful single page.
+
+phase_authentification5: By clicking login, another page opens, giving us the opportunity to inform our our username and password to access other pages permanently to the application.
+
+phase_authentification6: 
+
+phase_authentification7:
+
+phase_authentification8:
+
+phase_authentification9:
+
+phase_authentification10:
+
+phase_authentification11:
+
+phase_authentification12:
+
+phase_authentification13:
+
+phase_authentification14:
+
+phase_authentification15:
+
+
+#page_accueil
+page_accueil: Home page
+
+page_accueil1: After entering our username and our password and click the login button to the right, and access to the home page of the application.
+
+
+page_accueil2: Here we have the welcome message and some information about the application to better use.
+
+
+#composition_menu
+composition_menu: The menus
+
+composition_menu1: Sigtools consists of a horizontal main menu of five (5) in which each menu tab (or tab) includes sub menus. Starting from left to right, we menus 
+
+composition_menu2: Home, Administration, Services, Report and Help 
+
+composition_menu3: Welcome
+
+composition_menu4: This is the menu that displays the welcome message. This page contains information on the application, some updates done and many others.
+
+composition_menu5: Administration
+
+composition_menu6: This is the menu of the "Administrators". The Administration menu contains four (4) sub menus namely:
+
+composition_menu7: User Management
+
+composition_menu8: This menu contains a submenu referring to the user's profile, user settings and user creation.
+
+composition_menu9: Category Management
+
+composition_menu10: Management tools
+
+composition_menu11: Facilities Management
+
+composition_menu12: Services
+
+composition_menu13: The Services menu is full of the following submenus:
+
+composition_menu14: Control tools
+
+composition_menu15: Receiving tools
+
+composition_menu16: Delivery tools
+
+composition_menu17: Report
+
+composition_menu18: This menu contains all the operations performed by a user during a period. These transactions relate to either:
+
+composition_menu19: The list of orders made monitoring the various dates and times, 
+
+composition_menu20: The list of tools receptions with all possible detail
+
+composition_menu21: Inventory Management
+
+composition_menu22: Creating a new user
+
+composition_menu23: The creation of a new category etc.., In a word, the menu states.
+
+composition_menu24: Help
+
+composition_menu25: Naturally, this is the menu for assistance, suggestions and criticisms. It is composed of two sub-menus are:
+
+composition_menu26: User
+
+composition_menu27: Messaging
+
+composition_menu28: La gestion des stocks,
+
+
+#creation_compte
+creation_compte: Account
+
+creation_compte1: 
+
+creation_compte2: 
+
+creation_compte3:   
+
+creation_compte4: 
+
+creation_compte5: 
+
+#nouvelle_categorie
+nouvelle_categorie0: Management category
+
+nouvelle_categorie1: How to create or add a new category?
+
+nouvelle_categorie2: To create or add a new category, it does pass mouse under the Administration menu and then click on category management.
+
+
+nouvelle_categorie3: Then on the page that appears, descending to the bottom left, click on create a new entity (create new entry)
+
+nouvelle_categorie4: By clicking this link, you get the page that allows us to create a new category
+
+nouvelle_categorie5: It gives the name of our class and its description and valid by clicking Create (create). Our class is created and let us go on the list of categories to see our new category depicted in the last row of categories.
+
+nouvelle_categorie6: To delete a category you go to the list of categories and the category in question right clicking on View (show), then erase (delete)
+
+nouvelle_categorie7: To edit a category you go to the list of categories and the category in question right click on edit (edit)
+
+
+nouvelle_categorie8: To see the tools that are from our class, click on tools category.
+
+nouvelle_categorie9: The process of manipulating tools follows a certain logic. Logic would dictate that before any operation, especially for the first use, you must first
+
+nouvelle_categorie10: create or add different types of tools,
+
+nouvelle_categorie11: create or add different types of tools that our school needs,
+
+nouvelle_categorie12: spend our commands and tools to manage properly.
+
+nouvelle_categorie13: Handling service menu would mean that our school has already created and put in relation with its parent and he or his children who depend on him. But all this function?
+
+
+nouvelle_categorie14:
+
+nouvelle_categorie15:
+
+nouvelle_categorie16:
+
+nouvelle_categorie17:
+
+nouvelle_categorie18:
+
+nouvelle_categorie19:
+
+nouvelle_categorie20:
+
+nouvelle_categorie21:
+
+nouvelle_categorie22:
+
+nouvelle_categorie23:
+
+nouvelle_categorie24:
+
+nouvelle_categorie25:
+
+nouvelle_categorie26:
+
+nouvelle_categorie27:
+
+
+#nouvel_outil
+nouvel_outil0: Management tool
+
+nouvel_outil1: How to create or add a new tool?
+
+nouvel_outil2: As the creation of a new category, the process is the same. So to create or add a new tool, the mouse is passed under the Administration menu and then click Management tools.
+
+nouvel_outil3: Then on the page that appears, descending to the bottom left, click on create a new entry (create new entry)
+
+nouvel_outil4: By clicking this link, you get the page that allows us to create a new tool
+
+nouvel_outil5: It tells the different fields then valid by clicking Create (create). Our new tool is created and let us go on the list of tools see depicted in the last line of tools.
+
+nouvel_outil6: To delete a tool we are going to Tools list and then click the tool in question right clicking on View (show), then erase (delete)
+
+nouvel_outil7: To edit a tool
+
+nouvel_outil8: Being on the delete page you can directly edit a tool by clicking on edit (edit) or you go to the list of tools and the tool in question right click on edit (edit)
+
+nouvel_outil9: How to delate a tool?
+
+nouvel_outil10:
+
+nouvel_outil11:
+
+nouvel_outil12:
+
+nouvel_outil13:
+
+nouvel_outil14:
+
+nouvel_outil15:
+
+nouvel_outil16:
+
+nouvel_outil17:
+
+nouvel_outil18:
+
+nouvel_outil19:
+
+nouvel_outil20:
+
+nouvel_outil21:
+
+nouvel_outil22:
+
+nouvel_outil23:
+
+nouvel_outil24:
+
+nouvel_outil25:
+
+nouvel_outil26:
+
+nouvel_outil27:
+
+
+#nouvelEts
+nouvelEts0: Management establishment
+
+nouvelEts1: How to create or add a new establishment?
+
+nouvelEts2: The process is the same. We move the mouse over the Administration menu and then click on Manage Ets.
+
+nouvelEts3: Then on the page that appears, descending to the bottom left, click on create a new entry (create new entry)
+
+nouvelEts4: By clicking this link, you get the page that allows us to create a new establishment
+
+nouvelEts5: It tells the different fields then valid by clicking Create (create). Our new property is created and let us go on the list of establishments to see featured in the last line of settlements.
+
+nouvelEts6: To delete an establishment you go to the list and then click Etablissementss l'Etablissement right in question, click on View (show), then erase (delete)
+
+nouvelEts7: To change the settings of Establishment
+
+nouvelEts8: Being on the delete page you can directly proceed to the establishment of a modification by clicking on edit (edit) or you go to the list of institutions and the property in question is right click edit (edit).
+
+nouvelEts9: How to delate Establishments?
+
+nouvelEts10:
+
+nouvelEts11:
+
+nouvelEts12:
+
+nouvelEts13:
+
+nouvelEts14:
+
+nouvelEts15:
+
+nouvelEts16:
+
+nouvelEts17:
+
+nouvelEts18:
+
+nouvelEts19:
+
+nouvelEts20:
+
+nouvelEts21:
+
+nouvelEts22:
+
+nouvelEts23:
+
+nouvelEts24:
+
+nouvelEts25:
+
+nouvelEts26:
+
+nouvelEts27:
+
+
+
+#commandeOutil
+commandeOutil0: Order tools
+
+commandeOutil1: How to order tools?
+
+commandeOutil2: To order tool, it goes to the Services menu. Drop-down list, click on Control tools
+
+commandeOutil3: After clicking Control tools are accessed page warehouses collection tools. This page is composed of two parts which are:
+
+commandeOutil4: ORDERING,
+
+commandeOutil5: CART,
+
+commandeOutil6: ORDERING consists of a block to select the different tools you need. While CART to select the site in which we would get our order
+
+commandeOutil7: nothing yet in your shopping cart.
+
+commandeOutil8:
+
+commandeOutil9:
+
+commandeOutil10:
+
+commandeOutil11:
+
+commandeOutil12:
+
+commandeOutil13:
+
+commandeOutil14:
+
+commandeOutil15:
+
+commandeOutil16:
+
+commandeOutil17:
+
+commandeOutil18:
+
+commandeOutil19:
+
+commandeOutil20:
+
+commandeOutil21:
+
+commandeOutil22:
+
+commandeOutil23:
+
+commandeOutil24:
+
+commandeOutil25:
+
+commandeOutil26:
+
+commandeOutil27:
+
+
+
+#receptionOoutil
+receptionOoutil0:
+
+receptionOoutil1:
+
+receptionOoutil2:
+
+receptionOoutil3:
+
+receptionOoutil4:
+
+receptionOoutil5:
+
+receptionOoutil6:
+
+receptionOoutil7:
+
+receptionOoutil8:
+
+receptionOoutil9:
+
+receptionOoutil10:
+
+receptionOoutil11:
+
+receptionOoutil12:
+
+receptionOoutil13:
+
+receptionOoutil14:
+
+receptionOoutil15:
+
+receptionOoutil16:
+
+receptionOoutil17:
+
+receptionOoutil18:
+
+receptionOoutil19:
+
+receptionOoutil20:
+
+receptionOoutil21:
+
+receptionOoutil22:
+
+receptionOoutil23:
+
+receptionOoutil24:
+
+receptionOoutil25:
+
+receptionOoutil26:
+
+receptionOoutil27:
+
+
+#livraisonOutil
+livraisonOutil0:
+
+livraisonOutil1:
+
+livraisonOutil2:
+
+livraisonOutil3:
+
+livraisonOutil4:
+
+livraisonOutil5:
+
+livraisonOutil6:
+
+livraisonOutil7:
+
+livraisonOutil8:
+
+livraisonOutil9:
+
+livraisonOutil10:
+
+livraisonOutil11:
+
+livraisonOutil12:
+
+livraisonOutil13:
+
+livraisonOutil14:
+
+livraisonOutil15:
+
+livraisonOutil16:
+
+livraisonOutil17:
+
+livraisonOutil18:
+
+livraisonOutil19:
+
+livraisonOutil20:
+
+livraisonOutil21:
+
+livraisonOutil22:
+
+livraisonOutil23:
+
+livraisonOutil24:
+
+livraisonOutil25:
+
+livraisonOutil26:
+
+livraisonOutil27:
+
+#Rapport
+
+rapport1: List of operations
+rapport2: Id
+rapport3: Organisation Unit
+rapport4: Status
+rapport5: Event
+rapport6: Created
+rapport7: Details
+rapport8: Products
+rapport9:
+
+
+#CartControler
+
+form1.product: Quantité
+form1.product: Produit

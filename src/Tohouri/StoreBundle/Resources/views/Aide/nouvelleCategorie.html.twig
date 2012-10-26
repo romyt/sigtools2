@@ -1,0 +1,75 @@
+{% extends "TohouriStoreBundle::layout.html.twig" %}
+
+{% block title %}Aide{% endblock %}
+
+{% block left %}
+
+{% endblock %}
+
+{% block body %}
+
+        <a href="{{ path('TohouriStoreBundle_aide_creationCompte') }}" title="{{ "creation_compte" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-5.png')}}" width="60px" height="30px">
+        </a>
+<a href="{{ path('TohouriStoreBundle_aide_nouvelOutil') }}" title="{{ "nouvel_outil0" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-6.png')}}" width="60px" height="30px" align="right">
+        </a>
+
+<fieldset> 
+     <legend align="center"><h1>{{ "nouvelle_categorie0" | trans }} </h1></legend>
+	 
+
+     <table class="di">
+	 <tr class="di">
+	 <td class="di">
+{{ "nouvelle_categorie9" | trans }} </br></br>
+
+<img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "nouvelle_categorie10" | trans }}</br>
+
+<img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "nouvelle_categorie11" | trans }}</br>
+
+<img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "nouvelle_categorie12" | trans }}.</br>
+
+<img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. {{ "nouvelle_categorie13" | trans }} ?
+    
+	<h3> <img src="{{ asset('bundles/tohouristore/images/opensource/dialog-ok-apply-4.png')}}"> {{ "nouvelle_categorie1" | trans }}</h3>
+	
+	{{ "nouvelle_categorie2" | trans }}</br></br>
+	
+	<div align="center"><img src="{{ asset('bundles/tohouristore/images/img/ajoutcategorie.JPG')}}"></div></br></br>
+	
+   {{ "nouvelle_categorie3" | trans }}</br></br>
+	<div align="center"><img src="{{ asset('bundles/tohouristore/images/img/ajoutcategorie1.JPG')}}"></div></br>
+	
+	{{ "nouvelle_categorie4" | trans }}</br></br>
+	
+	<div align="center"><img src="{{ asset('bundles/tohouristore/images/img/ajoutcategorie2.JPG')}}"></div></br></br>
+	
+{{ "nouvelle_categorie5" | trans }} </br></br>
+<div align="center"><img src="{{ asset('bundles/tohouristore/images/img/ajoutcategorie3.JPG')}}"></div>
+
+<h3><h3> <img src="{{ asset('bundles/tohouristore/images/opensource/dialog-ok-apply-4.png')}}">. {{ "nouvelle_categorie6" | trans }}</h3>
+
+{{ "nouvelle_categorie7" | trans }}</br></br>
+<div align="center"><img src="{{ asset('bundles/tohouristore/images/img/ajoutcategorie4.JPG')}}"></div></br>
+
+   {{ "nouvelle_categorie8" | trans }}</br></br>
+   <div align="center"><img src="{{ asset('bundles/tohouristore/images/img/ajoutcategorie5.JPG')}}"></div>
+   
+    </td>
+	</tr>
+	</table>
+
+</fieldset>
+
+        <a href="{{ path('TohouriStoreBundle_aide_creationCompte') }}" title="{{ "creation_compte" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-5.png')}}" width="60px" height="30px">
+        </a>
+<a href="{{ path('TohouriStoreBundle_aide_nouvelOutil') }}" title="{{ "nouvel_outil0" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-6.png')}}" width="60px" height="30px" align="right">
+        </a>
+
+{% endblock %}
+{% block right %}
+
+{% endblock %}

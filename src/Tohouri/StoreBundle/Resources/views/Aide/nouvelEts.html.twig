@@ -1,0 +1,74 @@
+{% extends "TohouriStoreBundle::layout.html.twig" %}
+
+{% block title %}Aide{% endblock %}
+
+{% block left %}
+
+{% endblock %}
+
+{% block body %}
+
+        <a href="{{ path('TohouriStoreBundle_aide_nouvelOutil') }}" title="{{ "nouvel_outil0" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-5.png')}}" width="60px" height="30px">
+        </a>
+	
+<a href="{{ path('TohouriStoreBundle_aide_commandeOutil') }}" title=" {{ "commandeOutil0" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-6.png')}}" width="60px" height="30px" align="right">
+        </a>
+<fieldset> 
+     <legend align="center"><h1>{{ "nouvelEts0" | trans }} </h1></legend>
+	 
+
+     <table class="di">
+	 <tr class="di">
+	 <td class="di">
+     <h3><img src="{{ asset('bundles/tohouristore/images/opensource/dialog-ok-apply-4.png')}}">. {{ "nouvelEts1" | trans }}</h3>
+	 
+         {{ "nouvelEts2" | trans }}</br></br>
+		 
+		 <div align="center"><img src="{{ asset('bundles/tohouristore/images/img/ajoutEts.JPG')}}"></div></br></br>
+
+      {{ "nouvelEts3" | trans }})</br></br>
+      <div align="center"><img src="{{ asset('bundles/tohouristore/images/img/ajoutEts1.JPG')}}"></div></br></br>
+
+
+      {{ "nouvelEts4" | trans }}</br></br>
+	  
+      <div align="center"><img src="{{ asset('bundles/tohouristore/images/img/ajoutEts2.JPG')}}"></div></br></br>
+
+      {{ "nouvelEts5" | trans }}</br></br> 
+	  
+      <div align="center"><img src="{{ asset('bundles/tohouristore/images/img/ajoutEts3.JPG')}}"></div>
+
+
+      <h3><img src="{{ asset('bundles/tohouristore/images/opensource/dialog-ok-apply-4.png')}}">. {{ "nouvelEts9" | trans }} </h3>
+	  
+	  {{ "nouvelEts6" | trans }})</br></br>
+	  
+      <div align="center"><img src="{{ asset('bundles/tohouristore/images/img/ajoutEts4.JPG')}}"></div>
+
+
+     <h3><img src="{{ asset('bundles/tohouristore/images/opensource/dialog-ok-apply-4.png')}}">.  {{ "nouvelEts7" | trans }} </h3>
+	 
+     {{ "nouvelEts8" | trans }}</br></br>
+     <div align="center"><img src="{{ asset('bundles/tohouristore/images/img/ajoutEts5.JPG')}}"></div>
+
+
+    </td>
+	</tr>
+	</table>
+
+</fieldset>
+
+        <a href="{{ path('TohouriStoreBundle_aide_nouvelOutil') }}" title="{{ "nouvel_outil0" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-5.png')}}" width="60px" height="30px">
+        </a>
+	
+<a href="{{ path('TohouriStoreBundle_aide_commandeOutil') }}" title="{{ "commandeOutil0" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-6.png')}}" width="60px" height="30px" align="right">
+        </a>
+
+{% endblock %}
+{% block right %}
+
+{% endblock %}

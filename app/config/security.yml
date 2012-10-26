@@ -1,2 +1,2 @@
 imports:
-    - { resource: "@TohouriStoreBundle/Resources/config/security.yml" }
+  - { resource: "@TohouriStoreBundle/Resources/config/security.yml" }

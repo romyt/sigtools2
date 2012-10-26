@@ -4,49 +4,70 @@
 
 {% block body %}
 
-<h1>Détail du Produit</h1>
+<fieldset> 
+     <legend align="center"><h1>{{ "detail_produit" | trans }}</h1></legend>
+	 
+	             {% if app.session.flash('notice') %}
+                <div class="flash-message">
+                   <h6 font-color="red"> <em>Notice</em>: {{ app.session.flash('notice') }}</h6>
+                </div>
+            {% endif %}
 
 <table class="record_properties">
     <tbody>
         <tr>
-            <th>Id</th>
+            <th>{{ "id" | trans }}</th>
             <td>{{ product.id }}</td>
         </tr>
         <tr>
-            <th>Name</th>
+            <th>{{ "name" | trans }}</th>
             <td>{{ product.name }}</td>
         </tr>
         <tr>
-            <th>Code</th>
+            <th>{{ "code" | trans }}</th>
             <td>{{ product.code }}</td>
         </tr>
         <tr>
-            <th>Description</th>
+            <th>{{ "description" | trans }}</th>
             <td>{{ product.description }}</td>
         </tr>
         <tr>
-            <th>Price</th>
+            <th>{{ "price" | trans }}</th>
             <td>{{ product.price }}</td>
+        </tr>
+        <tr>
+            <th>{{ "categorie" | trans }}</th>
+            <td>{{ product.category }}</td>
         </tr>
     </tbody>
 </table>
 
+
+        <div align="center">  
+        <ul class="record_actions">
+    <li>
+         
+        <form action="{{ path('TohouriStoreBundle_category_edit', { 'id': product.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">{{ "editer" | trans }}</button>
+            
+          
+		   
+		           <form action="{{ path('TohouriStoreBundle_category_delete', { 'id': product.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">{{ "supprimer" | trans }}</button>
+        </form>
+	</ul>
+		</div>
+</fieldset>
+
 <ul class="record_actions">
     <li>
         <a href="{{ path('TohouriStoreBundle_product') }}">
-            Back to the list
+            <button type="submit">{{ "retour" | trans }}</button>
+            
         </a>
     </li>
-    <li>
-        <a href="{{ path('TohouriStoreBundle_product_edit', { 'id': product.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>
-        <form action="{{ path('TohouriStoreBundle_product_delete', { 'id': product.id }) }}" method="post">
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
+
 </ul>
 {% endblock %}

@@ -4,26 +4,46 @@
 
 {% block body %}
 
-<h1>Category edit</h1>
+<fieldset> 
+     <legend align="center"><h1>{{ "editer_categorie" | trans }}</h1></legend>
 
+<div align="center">
 <form action="{{ path('TohouriStoreBundle_category_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-    {{ form_widget(edit_form) }}
-    <p>
-        <button type="submit">Edit</button>
-    </p>
-</form>
+	
+      <table class="tabledim">
+      
+	  <tr class="couleur">
+        <td class="couleur">{{ form_label(edit_form.name) }}</td>
+		<td class="couleur">{{ form_errors(edit_form.name) }}
+                            {{ form_widget(edit_form.name) }}
+	    </td>
+	  </tr>
+	  <tr class="couleur">
+        <td class="couleur">{{ form_label(edit_form.description) }}</td>
+        <td class="couleur">{{ form_errors(edit_form.description) }}
+                            {{ form_widget(edit_form.description) }}
+		</td>
+	  </tr>
+  </table>
+  
+         {{ form_rest(edit_form) }}
+    
+        <button type="submit">{{ "editer" | trans }}</button>
+    
 
+        <form action="{{ path('TohouriStoreBundle_category_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">{{ "supprimer" | trans }}</button>
+        </form>
+    </form>
+</div>
+
+</fieldset>
 <ul class="record_actions">
     <li>
         <a href="{{ path('TohouriStoreBundle_category') }}">
-            Back to the list
+            <button type="submit">{{ "retour" | trans }}</button>
         </a>
-    </li>
-    <li>
-        <form action="{{ path('TohouriStoreBundle_category_delete', { 'id': entity.id }) }}" method="post">
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
     </li>
 </ul>
 {% endblock %}

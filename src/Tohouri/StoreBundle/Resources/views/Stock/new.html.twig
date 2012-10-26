@@ -4,19 +4,47 @@
 
 {% block body %}
 
-<h1>Creation d'un nouveau stock</h1>
+<fieldset> 
+     <legend align="center"><h1>{{ "nouveau_stock" | trans }}</h1></legend>
+	 
+            {% if app.session.flash('notice') %}
+                <div class="flash-message">
+                   <h6 font-color="red"> <em>Notice</em>: {{ app.session.flash('notice') }}</h6>
+                </div>
+            {% endif %}
+
+<div align="center"> 
 
 <form action="{{ path('TohouriStoreBundle_stock_create') }}" method="post" {{ form_enctype(form) }}>
-    {{ form_widget(form) }}
+   
+   <table class="tabledim">
+      
+	 <div align="center"> 
+	  <tr class="couleur">
+        <td class="couleur">{{ form_label(form.quantity) }}</td>
+		<td class="couleur">{{ form_errors(form.quantity) }}
+                            {{ form_widget(form.quantity) }}
+	    </td>
+	  </tr>
+	  <tr class="couleur">
+        <td class="couleur">{{ form_label(form.product) }}</td>
+        <td class="couleur">{{ form_errors(form.product) }}
+                            {{ form_widget(form.product) }}
+		</td>
+	  </tr>
+  </table>
+     
+	  {{ form_rest(form) }}
     <p>
-        <button type="submit">Create</button>
-    </p>
-</form>
-
+        <button type="submit">{{ "creer_entite" | trans }}</button>
+    </p>		
+  </form>
+</div>
+</fieldset>
 <ul class="record_actions">
     <li>
         <a href="{{ path('TohouriStoreBundle_stock') }}">
-            Back to the list
+            <button type="submit">{{ "retour" | trans }}</button>
         </a>
     </li>
 </ul>

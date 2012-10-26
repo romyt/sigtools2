@@ -72,9 +72,9 @@ class Product
 	protected $category;
 
 	/**
-	* @ORM\OneToOne(targetEntity="Stock", mappedBy="product", cascade={"persist", "remove"})
+	* @ORM\OneToMany(targetEntity="Stock", mappedBy="product", cascade={"persist", "remove"})
 	*/
-	private $stock;
+	private $stocks;
 
 
     public function __construct() {
@@ -197,27 +197,6 @@ class Product
     }
 
     /**
-     * Set stock
-     *
-     * @param Tohouri\StoreBundle\Entity\Stock $stock
-     */
-    public function setStock(\Tohouri\StoreBundle\Entity\Stock $stock)
-    {
-        $this->stock = $stock;
-    }
-
-    /**
-     * Get stock
-     *
-     * @return Tohouri\StoreBundle\Entity\Stock 
-     */
-    public function getStock()
-    {
-        return $this->stock;
-    }
-
-
-    /**
      * Add cartOrders
      *
      * @param Tohouri\StoreBundle\Entity\CartOrder $cartOrders
@@ -235,5 +214,26 @@ class Product
     public function getCartOrders()
     {
         return $this->cartOrders;
+    }
+
+
+    /**
+     * Add stocks
+     *
+     * @param Tohouri\StoreBundle\Entity\Stock $stocks
+     */
+    public function addStock(\Tohouri\StoreBundle\Entity\Stock $stocks)
+    {
+        $this->stocks[] = $stocks;
+    }
+
+    /**
+     * Get stocks
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getStocks()
+    {
+        return $this->stocks;
     }
 }

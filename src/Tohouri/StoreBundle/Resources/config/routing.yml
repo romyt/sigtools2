@@ -1,6 +1,7 @@
 TohouriStoreBundle_homepage:
     pattern:  /
-    defaults: { _controller: TohouriStoreBundle:Stock:index }
+    defaults: { _controller: TohouriStoreBundle:Accueil:index }
+    
 # routing definition for product entity
 TohouriStoreBundle_product:
     pattern:  /product
@@ -187,3 +188,72 @@ TohouriStoreBundle_acteur_modifier:
 TohouriStoreBundle_acteur_supprimer:
   pattern: /admin/acteur/supprimer/{id}
   defaults: { _controller: TohouriStoreBundle:Acteur:supprimer }
+
+# ########Config Adje###########################
+
+TohouriStoreBundle_rapport:
+  pattern:  /rapport
+  defaults: { _controller: TohouriStoreBundle:Rapport:index }
+
+TohouriStoreBundle_rapport_show:
+  pattern:  /rapport/show
+  defaults: { _controller: TohouriStoreBundle:Rapport:show }
+
+
+# routing for help
+TohouriStoreBundle_aide:
+  pattern:  /aide
+  defaults: { _controller: TohouriStoreBundle:Aide:index }
+
+TohouriStoreBundle_aide_premiereUtilisation:
+  pattern:  /aide/premiereUtilisation
+  defaults: { _controller: TohouriStoreBundle:Aide:premiereUtilisation }
+
+TohouriStoreBundle_aide_phaseAuthentification:
+  pattern:  /aide/phaseAuthentification
+  defaults: { _controller: TohouriStoreBundle:Aide:phaseAuthentification }
+
+TohouriStoreBundle_aide_creationCompte:
+  pattern:  /aide/creationCompte
+  defaults: { _controller: TohouriStoreBundle:Aide:creationCompte }
+
+TohouriStoreBundle_aide_pageAccueil:
+  pattern:  /aide/pageAccueil
+  defaults: { _controller: TohouriStoreBundle:Aide:pageAccueil }
+
+TohouriStoreBundle_aide_menu:
+  pattern:  /aide/menu
+  defaults: { _controller: TohouriStoreBundle:Aide:menu }
+
+TohouriStoreBundle_aide_manipulationOutil:
+  pattern:  /aide/manipulationOutil
+  defaults: { _controller: TohouriStoreBundle:Aide:manipulationOutil }
+
+TohouriStoreBundle_aide_nouvelleCategorie:
+  pattern:  /aide/nouvelleCategorie
+  defaults: { _controller: TohouriStoreBundle:Aide:nouvelleCategorie }
+
+TohouriStoreBundle_aide_nouvelOutil:
+  pattern:  /aide/nouvelOutil
+  defaults: { _controller: TohouriStoreBundle:Aide:nouvelOutil }
+
+TohouriStoreBundle_aide_nouvelEts:
+  pattern:  /aide/nouvelEts
+  defaults: { _controller: TohouriStoreBundle:Aide:nouvelEts }
+
+TohouriStoreBundle_aide_commandeOutil:
+  pattern:  /aide/commandeOutil
+  defaults: { _controller: TohouriStoreBundle:Aide:commandeOutil }
+
+TohouriStoreBundle_aide_receptionOutil:
+  pattern:  /aide/receptionOutil
+  defaults: { _controller: TohouriStoreBundle:Aide:receptionOutil }
+
+TohouriStoreBundle_aide_livraisonOutil:
+  pattern:  /aide/livraisonOutil
+  defaults: { _controller: TohouriStoreBundle:Aide:livraisonOutil }
+
+# routing for language choice
+TohouriStoreBundle_choisir_langue:
+  pattern: /choisirlangue/{langue}
+  defaults: { _controller: TohouriStoreBundle:Choisirlangue:choisirlangue }

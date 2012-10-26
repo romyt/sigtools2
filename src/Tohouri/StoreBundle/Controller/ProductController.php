@@ -9,7 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Tohouri\StoreBundle\Entity\Product;
-use Tohouri\StoreBundle\Form\ProductType;
+use Tohouri\StoreBundle\Form\Type\ProductType;
 
 /**
  * Product controller.

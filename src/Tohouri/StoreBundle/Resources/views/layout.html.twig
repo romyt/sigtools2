@@ -10,51 +10,186 @@
 				SIGTOOL
 			{% endblock %}	
 		</title>
-        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+       <link rel="shortcut icon" href="{{ asset('bundles/tohouristore/images/logo Sigtools2.png') }}">
     </head>
     <body>
+
+			
+                <img src="{{ asset('bundles/tohouristore/images/logo Sigtools2.png')}}" alt="Accueil" class="gauchelogo">
+            
+									
+			
+                <img src="{{ asset('bundles/tohouristore/images/DIPE.gif') }}" alt="Accueil" class="droitelogo"> 
+			
+			{% block left %}
+			{% endblock %}
+           
+           
+	<div class="symfo-wrapper1">{%block inofosleft%}sqdfghqzsdfgh{%endblock%}</div>
+	<div class="symfo-wrapper">{%block infosright%}sqdfghf{%endblock%}</div>
         <div id="symfony-wrapper">
             <div id="symfony-header">
-				<div id="connexion">
-				    {% include "TohouriUsersBundle::connexion.html.twig" %}
+		  <div align="center">
+				
+				<div align="left">
+		            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+		                {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+		                <a href="{{ path('fos_user_security_logout') }}">
+		                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+		                </a>
+		            {% else %}
+                     <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+		            {% endif %}
 				</div>
-	        <div>
-            {% if app.session.flash('notice') %}
-                <div class="flash-message">
-                    <em>Notice</em>: {{ app.session.flash('notice') }}
-                </div>
-            {% endif %}
+				<div align="right">
+                   {{ "choisir_langue" | trans }}:
+                   <a href="{{ path('TohouriStoreBundle_choisir_langue', {'langue': 'fr'}) }}" title="Français"> <img src="{{ asset('bundles/tohouristore/images/opensource/flag-fr (2).png')}}" width="25px" height="25px"></a> | 
+                   <a href="{{ path('TohouriStoreBundle_choisir_langue', {'langue': 'en'}) }}" title="Anglais"><img src="{{ asset('bundles/tohouristore/images/opensource/flag-us (2).png')}}" width="25px" height="25px"></a></a>
+               </div>
+       </div>
 
-            {% block content_header %}
-                <ul id="menu">
-                    {% block content_header_more %}
-                        <li><a href="{{ path('TohouriStoreBundle_homepage') }}">Accueil</a></li>
-						<li><a href="{{ path('TohouriStoreBundle_product')}}">Gestion des outils</a></li>
-						<li><a href="{{ path('TohouriStoreBundle_category')}}">Gestion des catégories</a></li>	
-						<li><a href="{{ path('TohouriStoreBundle_stock')}}">Gestion des Stocks</a></li>
-						<li><a href="{{ path('TohouriStoreBundle_stock_add')}}">Réceptionner des outils</a></li>
-						<li><a href="{{ path('TohouriStoreBundle_cart_add')}}">Commande</a></li>
-						<li><a href="{{ path('TohouriStoreBundle_orgunit')}}">Ets</a></li>	
-                    {% endblock %}
-                </ul>
-				{% block sub_menue %}
-				{% endblock sub_menue %}
-                <div style="clear: both"></div>
-            {% endblock %}
+
 
             <div class="symfony-content">
                 {% block content %}
 					   <div id="content">
 							{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+							
+            {% block content_header %}
+               
+            {% block content_header_more %}
+<div class="centremenu">			   
+<div class="art-bar art-nav">
+<div class="art-nav-outer">
+	<ul class="art-hmenu">
+		<li>
+			<a href="{{ path('TohouriStoreBundle_homepage') }}">{{ "accueil"|trans }}</a>
+		</li>	
+			
+		<li>
+            <a href="{{ path('fos_user_profile_show')}}">{{ 'Administration'|trans({}, 'FOSUserBundle') }}</a>
+        <ul>
+		<li>
+			<a href="{{ path('fos_user_profile_show')}}">{{ 'Profile'|trans({}, 'FOSUserBundle') }}</a>   
+			<ul>
+				<li>
+                     <a href="{{ path('fos_user_profile_show')}}">{{ 'profile.show.username'|trans({}, 'FOSUserBundle') }}</a>   
+
+                </li>
+				<li>
+                     <a href="{{ path('fos_user_profile_edit')}}">{{ 'change_password.submit'|trans({}, 'FOSUserBundle') }}</a>    
+
+                </li>
+				<li>
+                    <a href="{{ path('fos_user_registration_register')}}">{{ 'nouvel_utlisateur'|trans }}</a>
+
+                </li>
+		</ul>
+		</li>
+				</li>
+
+				<li>
+                    <a href="{{ path('TohouriStoreBundle_category')}}">{{ "gestion_categorie" | trans }} </a>
+
+                </li>
+				<li>
+                    <a href="{{ path('TohouriStoreBundle_product')}}">{{ "gestion_outils" | trans }}</a>
+
+                </li>
+
+				<li>
+                    <a href="{{ path('TohouriStoreBundle_orgunit')}}">{{ "gestion_ets" | trans }}</a>
+
+                </li>
+			</ul>
+        </li>
+
+		<li>
+			<a href="{{ path('TohouriStoreBundle_stock_add')}}">Services</a>
+			<ul>
+				<li>
+                    <a href="{{ path('TohouriStoreBundle_cart_add')}}">{{ "commande_outil" | trans }}</a>
+
+                </li>
+				<li>
+                    <a href="{{ path('TohouriStoreBundle_shipping')}}">{{ "reception_outil" | trans }}</a>
+
+                </li>
+				<li>
+                    <a href="{{ path('TohouriStoreBundle_stock_add')}}">{{ "livraison_outil" | trans }}</a>
+
+                </li>
+				<li>
+                    <a href="{{ path('TohouriStoreBundle_stock')}}">{{ "gestion_stock" | trans }}</a>
+
+                </li>
+
+		</ul>
+		</li>	
+		<li>
+			<a href="{{ path('TohouriStoreBundle_rapport') }}">{{ "rapport" | trans }}</a>
+			<ul>
+				<li>
+                    <a href="{{ path('TohouriStoreBundle_rapport')}}">{{ "resume" | trans }}</a>
+
+                </li>
+			</ul> 
+		</li>
+		  <li>
+			 <a href="{{ path('TohouriStoreBundle_aide') }}" target="_blank" >{{ "aide" | trans }}</a>
+               <ul>
+		  <li>
+			  <a href="{{ path('TohouriStoreBundle_aide') }}" target="_blank">{{ "manuel" | trans }}</a>
+		  </li>
+		  <li>
+			  <a href="{{ path('TohouriStoreBundle_aide') }}" target="_blank">{{ "message" | trans }}</a>
+		  </li>
+
+       </ul>
+		</li>
+
+	</ul>
+
+</div>
+</div>
+</div>
+      
+                    {% endblock %}
+					<div centrelogo>
+					&nbsp;
+					</div>
+                
+
+				{% block sub_menue %}
+				
+				{% endblock sub_menue %}
+                <div style="clear: both"></div>
+            {% endblock %}
+
 				            	{% block body %}
+								
 								{% endblock %}
 							{% else %}
-					            <P>Cliquez sur <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a> pour vous authentifier.</P>
+							<div align="center">
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+
+
+
+			<h1><a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a></h1>
+
+
+
+							</div>
 					        {% endif %}
 				        </div>
 				        {% block javascripts %}{% endblock %}
 						 {% block fos_user_content %}
 				         {% endblock fos_user_content %}
+			                <div>&nbsp;</div>
+
+
+
                 {% endblock %}
             </div>
 
@@ -66,12 +201,17 @@
             {% if code is defined %}
                 <h2>Code behind this page</h2>
                 <div class="symfony-content">{{ code|raw }}</div>
+				<div>
+
             {% endif %}
+			{% block right %}
+			{% endblock %}
         </div>
 		<div id="footer" align="center">
                 <img src="{{ asset('bundles/tohouristore/images/PEPFAR.png') }}" width=100 height=90 alt="PEPFAR" />
 				<img src="{{ asset('bundles/tohouristore/images/USAID.png') }}" alt="USAID" />
 				<img src="{{ asset('bundles/tohouristore/images/MEASURE.png') }}" alt="MEASURE"  />
 		</div>
+		
     </body>
 </html>

@@ -4,15 +4,16 @@
 
 {% block body %}
 
-<h1>Liste des Categories</h1>
+<fieldset> 
+     <legend align="center"><h1>{{ "liste_categorie" | trans }}</h1></legend>
 
 <table class="records_list">
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Actions</th>
+            <th>{{ "id" | trans }}</th>
+            <th>{{ "name" | trans }}</th>
+            <th>{{ "description" | trans }}</th>
+            <th>{{ "action" | trans }}</th>
         </tr>
     </thead>
     <tbody>
@@ -24,13 +25,13 @@
             <td>
                 <ul>
                     <li>
-                        <a href="{{ path('TohouriStoreBundle_category_show', { 'id': category.id }) }}">show</a>
+                        <a href="{{ path('TohouriStoreBundle_category_show', { 'id': category.id }) }}">{{ "montrer" | trans }}</a>
                     </li>
                     <li>
-                        <a href="{{ path('TohouriStoreBundle_category_edit', { 'id': category.id }) }}">edit</a>
+                        <a href="{{ path('TohouriStoreBundle_category_edit', { 'id': category.id }) }}">{{ "editer" | trans }}</a>
                     </li>
 					<li>
-                        <a href="{{ path('TohouriStoreBundle_category_member', { 'id': category.id }) }}">Outils de la catégorie</a>
+                        <a href="{{ path('TohouriStoreBundle_category_member', { 'id': category.id }) }}">{{ "outil_categorie" | trans }}</a>
                     </li>
                 </ul>
             </td>
@@ -38,11 +39,12 @@
     {% endfor %}
     </tbody>
 </table>
+</fieldset>
 
 <ul>
     <li>
         <a href="{{ path('TohouriStoreBundle_category_new') }}">
-            Create a new entry
+             <button type="submit">{{ "creer_entite" | trans }}</button>
         </a>
     </li>
 </ul>

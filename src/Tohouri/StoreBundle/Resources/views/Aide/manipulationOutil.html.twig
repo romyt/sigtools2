@@ -1,0 +1,55 @@
+{% extends "TohouriStoreBundle::layout.html.twig" %}
+
+{% block title %}Aide{% endblock %}
+
+{% block left %}
+
+{% endblock %}
+
+{% block body %}
+
+        <a href="{{ path('TohouriStoreBundle_aide_premiereUtilisation') }}" title="première utilisation">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-6.png')}}" width="60px" height="30px" align="right">
+        </a>
+
+<fieldset> 
+     <legend align="center"><h1> </h1></legend>
+	 
+
+     <table class="di">
+	 <tr class="di">
+	 <td class="di">
+	 	 	Pour télécharger le manuel de l'utilisateur en PDF, veuillez cliquer sur le logo du fichier PDF.</br>
+	Pour lire le manuel cliquer sur miroire pour lire le manuel en intégralité ou voir à gouche pour cliquer sur le chapitre qui nous interesse afin d'accéder à son contenu.
+    <h4>
+	   <ul>
+	           <li> <a href="{{ path('TohouriStoreBundle_aide') }}">Première utilisation de l'application</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide') }}">Phase d'authentification</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide') }}">Création de compte utilisateur</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide') }}"> La page d'accueil</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide') }}">La composition des différents  Menus</a> </li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide') }}">Processus de manipulation des Outils </a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide') }}">Comment créer ou ajouter une nouvelle Catégorie ?</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide') }}">Comment créer ou ajouter un nouvel  Outil ?</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide') }}">Comment créer ou ajouter un nouvel  Etablissement ?</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide') }}">Comment passer une commande d'Outils ?</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide') }}">Comment se faire la réception d'Outils ?</a></li>
+               <li>             <a href="{{ path('TohouriStoreBundle_aide') }}">Comment  se faire la livraison des Outils? </a></li>
+
+          </ul>
+	 </h4>
+
+    </td>
+	</tr>
+	</table>
+
+</fieldset>
+
+        <a href="{{ path('TohouriStoreBundle_aide_premiereUtilisation') }}" title="première utilisation">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-6.png')}}" width="60px" height="30px" align="right">
+        </a>
+
+{% endblock %}
+{% block right %}
+
+{% endblock %}

@@ -1,0 +1,666 @@
+choisir_langue: Choisir langue
+
+#traduction de la	 page d'accueil
+Welcome: Bienvenue
+Welcome.texte: SIGTOOLS est une application web développée par MEAUSRE évaluation JSI/Côte d'Ivoire afin d'aider le Ministère de la Santé et de la Lutte contre le SIDA(MSLS) à gérer, expédier et d'évaluer le nombre d'outils à imprimer selon les besoins des établissements sanitaires. L'outil est basé sur le Web afin de permettre à toutes les régions du pays  de définir leurs propres besoins en termes de collecte formes de distribution d'outils. Le Ministère de la Santé, les régions ou les districts seront capables de commander des outils de collecte de données et seront également en mesure de les distribuer dans leur zone de couverture respective. Les commandes sont enregistrées dans la base de données en ligne, où la DIPE peut voir combien d'outils doivent être imprimés et combien doit être envoyés à quelle région  sanitaire, du district ou de l'établissement sanitaire. Pour se faire, les différents utilisateurs doivent au préalablement être enregistrés dans la base de données afin de s'authentifier pour pouvoir  accéder aux différents avantages qu'offre l'application.
+
+#traduction des menus
+accueil: Accueil
+administration: Adminstration
+services: Services
+rapport: Rapport
+aide: Aide
+
+#traduction des entetes des tableaux
+id: Numero
+name: Nom
+description: Descriptions
+action: Actions
+ets: Etablisement
+produit: Produits
+event: Evénements
+date: Date
+detail: Details
+adresse: Adresse
+code: Code
+price: Prix
+categorie: Catégorie
+quantite: Quantité
+expedier: Expédier
+etablir: Etablir
+parent: Parent
+enfant: Enfants
+
+
+
+#traduction des sous menus
+gestion_utlisateurs: Gestion des utlisateurs
+profile_utilisateur: Profil utilisateur
+parametre_utilisateur: Modifier les paramètres utilisateurs  
+nouvel_utlisateur: Créer un nouvel utilisateur
+gestion_categorie: Gestion des Catégories
+gestion_ets: Gestion des Ets
+gestion_outils: Gestion des Outils
+commande_outil: Commande d'Outlis
+reception_outil: Reception d'Outils
+livraison_outil: Livraison d'Outils
+gestion_stock: Gestion des Stocks
+manuel: Manuel de l'utilisateur
+message: Messagerie
+resume: Etat des Opérations
+
+#traduction de la page Utilisateurs
+reference: Références Utilisateur
+utilisateur: Utilisateur
+nouvel_utilisayeur: Nouvel Utilisateur
+
+
+#traduction de la page gestion des catégorie
+montrer: Voir
+editer: Editer
+creer_entite: Créer une nouvelle entrée
+supprimer: Supprimer
+outil_categorie: Les outils de la Catégorie
+liste_categorie: Liste des Catégories
+categorie: Catégorie
+retour: Retour
+retour_categorie: Retour à la liste des Catégorie
+nouvelle_categorie: Nouvelle Catégorie
+editer_categorie: Editer une Catégorie
+produit_categorie: Produit de la catégorie
+
+
+# traduction de la page de gestion des outils
+detail_produit: Liste détaillée des Produits
+nouveau_produit: Ajouter un nouveau Produit
+list_produit: Liste des Produits
+editer_produit: Editer un Produit
+retour_list: retour liste détaillée
+
+
+#traduction de la page de gestion des Ets
+orgaunit_edit: Editer une Unité de Localisation
+orgaunit: Unité de Localisation
+orgaunit_create: Créer une Unité d'Organisation
+
+
+#traduction de la page de commaded'outils
+envoyer: Envoyer la commande
+entrepot: Entrepôt d'outil de collecte
+commande: Passer une commande
+ajouter: Ajouter à la commande
+panier: PANIER
+
+
+
+#traduction de la page des stocks
+detail_stock:  Détail des Stock
+nouveau_stock: Créer un nouveau Stock
+stock_dispo: Liste des stocks disponibles
+inventaire: Inventaire des Stcoks
+ajouter_stock: Ajouter au Stock
+
+
+
+#traduction de la page d'aide
+
+#index
+
+index: Première utilisation de l'application
+
+index1: Phase d'authentification
+
+index2: Création de compte utilisateur
+
+index3: La page d'accueille
+
+index4: La composition des différents  Menus 
+
+index5: Processus de manipulation des outils
+
+index6: Comment créer ou ajouter une nouvelle catégorie ?
+
+index7: Comment créer ou ajouter un nouvel  outil ?
+
+index8: Comment créer ou ajouter un nouvel  établissement ?
+
+index9: Comment passer une commande d'outils ?
+
+index10: Comment se faire la réception d'outils ? 
+
+index11: Comment  se faire la livraison des outils
+
+index12: Pour télécharger le manuel de l'utilisateur en PDF, veuillez cliquer sur le logo du fichier PDF. Pour la lecture en ligne, voir le sommeil afin de selectionner le chapitre qui nous interesse.
+
+index13: Version PDF
+
+index14: Manuel de l'utilisateur
+
+index15:
+
+indes16:
+
+index17:
+
+index18:
+
+
+#premiere_utilisation
+
+premiere_utilisation: Première utilisation 
+
+premiere_utilisation1: SIGTOOLS est une application web développée par MEAUSRE évaluation JSI / Côte d'Ivoire afin d'aider le Ministère de la Santé et de la Lutte contre le SIDA(MSLS) à gérer, expédier et d'évaluer le nombre d'outils à imprimer selon les besoins des établissements sanitaires. L'outil est basé sur le Web afin de permettre à toutes les régions du pays de définir leurs propres besoins en termes de collecte formes de distribution d'outils. Le Ministère de la Santé, les régions ou les districts seront capables de commander des outils de collecte de données et seront également en mesure de les distribuer dans leur zone de couverture respective. Les commandes sont enregistrées dans la base de données en ligne, où la DIPE peut voir combien d'outils doivent être imprimés et combien doit être envoyés à quelle région sanitaire, du district ou de l'établissement sanitaire. Pour se faire, les différents utilisateurs doivent au préalable se faire enregistrer dans la base de données afin de s'authentifier pour pouvoir accéder aux différents avantages qu'offre l'application.
+
+premiere_utilisation2: Alors comment pourrions-nous faire enregistrer dans la base de données en ligne ?
+
+premiere_utilisation3: Afin d'assurer un contrôle minutieux des différentes opérations effectuées sur l'application, trois types d'utilisateurs ont été définis.
+
+premiere_utilisation4: Les utilisateurs ayant le droit de SUPER-ADMIN
+
+premiere_utilisation5: Ce sont les utilisateurs du niveau central. C'est-à-dire les utilisateurs de la DIPE, de la DGS, et du PNPEC. Ceux là bénéficient de tous les droits d'utilisation. Ils ont les droits de consulter, d'avertir, de critiquer, de réduire, d'augmenter  les droits ou de supprimer les USER-ADMIN. En un mot les   SUPER-ADMIN ont un droit « no limit ».
+
+premiere_utilisation6: Les utilisateurs ayant le droit de USER-ADMIN
+
+premiere_utilisation7: Les utilisateurs ayant le droit de USER-ADMIN sont les utilisateurs du niveau région ou district. Ces utilisateurs bénéficient des droits d'administration locale. Ils ont la possibilité de voir donc de consulter toutes les opérations qui ont lieu dans leurs différentes zones de couverture. Ces droits les sont attribués par les utilisateurs du niveau central. Ce qui voudrait dire que les   USER-ADMIN sont crées par les SUPER-ADMIN
+
+premiere_utilisation8: Les utilisateurs ayant le droit de USER
+
+
+premiere_utilisation9: Ces derniers sont les utilisateurs des différents établissements sanitaires. Ils sont crées par les USER-ADMIN. Les   USER dépendent impérativement des USER-ADMIN.
+
+premiere_utilisation10:
+
+
+
+#phase_authentification
+
+phase_authentification: Phase d'Authentification
+
+phase_authentification1: Remarque importante :
+
+phase_authentification2: L'accès à l'application se fait toujours par le biais d'internet et d'un navigateur internet. Sans la présence de ces deux services l'accès à l'application est impossible car l'application est une application web(présente sur internet).
+
+phase_authentification3: Exemple d'un navigateur internet :
+
+phase_authentification4: Après le lancement de notre navigateur préféré et que nous ayons mit l'adresse de l'application, nous accédons à  une page : c'est la page d'authentification. C'est la porte d'entrée de l'application. En d'autres termes, la page de bienvenue. A ce stade, tout ce qu'on doit faire est de nous authentifier afin de continuer notre visite. Dans le cas contraire, on ne pourra qu'admirer cette seule  et belle page.
+
+phase_authentification5: En cliquant sur login, une autre page s'ouvre, nous donnant la possibilité de renseigner notre nom d'utilisateur et notre mot de passe afin d'accéder définitivement aux autres pages de l'application.
+
+phase_authentification6: 
+
+phase_authentification7:
+
+phase_authentification8:
+
+phase_authentification9:
+
+phase_authentification10:
+
+phase_authentification11:
+
+phase_authentification12:
+
+phase_authentification13:
+
+phase_authentification14:
+
+phase_authentification15:
+
+
+#page_accueil
+page_accueil: La page d'Accueil
+
+page_accueil1: Après avoir renseigné notre nom d'utilisateur et notre mot de passe et en cliquant sur le bouton login à droite, on accède ainsi à la page d'accueil de l'application.
+
+page_accueil2: Ici on a le message de bienvenue et quelques informations sur l'application pour une meilleure utilisation.
+
+
+
+#composition_menu
+composition_menu: La composition des menus
+
+composition_menu1: Sigtools est composé d'un menu principal horizontal de cinq(5) onglet dont chaque menu  (ou onglet) comprend des sous menus. En partant de la gauche vers la droite, nous les menus
+
+composition_menu2:  Accueil, Administration, Services, Rapport et en fin Aide.
+
+composition_menu3: Accueil
+
+composition_menu4: C'est le menu qui affiche le message de bienvenue. Cette page comporte les informations sur l'application, de certaines mises à jour effectuées et bien d'autres.
+
+composition_menu5: Administration
+
+composition_menu6: C'est le menu des « administrateurs ». Le menu Administration comprend quatre(4) sous menus à savoir :
+
+composition_menu7: Gestion des utilisateurs
+
+composition_menu8: Ce menu contient un sous menu se référant au profil de l'utilisateur, les paramètres des utilisateurs et la création d'un utilisateur.
+
+composition_menu9: Gestion des catégories
+
+composition_menu10: Gestion des outils
+
+composition_menu11: Gestion des établissements
+
+composition_menu12: Services
+
+composition_menu13: Le menu Services regorge les sous menus suivant :
+
+composition_menu14: Commande d'outils
+
+composition_menu15: Réception d'outils
+
+composition_menu16: Livraison d'outils
+
+composition_menu17: Rapport
+
+composition_menu18: Ce menu contient toutes les opérations effectuées par un utilisateur durant une période. Ces opérations concernent soit :
+
+composition_menu19: La liste des commandes effectuées suivi des différentes dates et les heures,
+
+composition_menu20: La liste des réceptions d'outils avec toutes les détailles possibles
+
+composition_menu21: La gestion des stocks
+
+composition_menu22: La création d'un nouvel utilisateur
+
+composition_menu23: La création d'une nouvelle catégorie etc.,  En un mot, c'est le menu des états.
+
+composition_menu24: Aide
+
+composition_menu25: Naturellement, c'est le menu destiné aux aides, suggestions  et critiques. Il est composé de deux sous menus que sont : 
+
+composition_menu26: Manuel de l'utilisateur
+
+composition_menu27: Messagerie
+
+composition_menu28: La gestion des stocks,
+
+
+#creation_compte
+creation_compte: 
+
+creation_compte1:  
+
+creation_compte2: 
+
+creation_compte3: 
+
+creation_compte4: 
+
+creation_compte5: 
+
+
+
+#nouvelle_categorie
+nouvelle_categorie0: Gestion des Catégories
+
+nouvelle_categorie1: Comment créer ou ajouter une nouvelle catégorie ?
+
+nouvelle_categorie2: Pour créer ou ajouter une nouvelle catégorie, on fait passe la souris sous le menu déroulant Administration puis on clique sur gestion des catégories.
+
+nouvelle_categorie3: Ensuite sur la page qui s'affiche, en descendant jusqu'en bas à gauche, on clique sur créer une nouvelle entité (create new entry)
+
+nouvelle_categorie4: En cliquant sur ce lien, on obtient la page qui nous  permet de créer une nouvelle catégorie
+
+nouvelle_categorie5: On donne le nom de notre catégorie puis sa description et valide en cliquant sur créer (create). Notre catégorie est  ainsi créée rendons-nous sur la liste des catégories pour voir notre nouvelle catégorie figurée à la dernière ligne des catégories. 
+
+nouvelle_categorie6: Pour supprimer une catégorie on va à la liste des catégories puis sur la catégorie en question à droite on clique sur Voir (show), puis sur effacer (delete)
+
+nouvelle_categorie7: Pour modifier une catégorie on va à la liste des catégories puis sur la catégorie en question à droite on clique sur éditer (edit),
+
+nouvelle_categorie8:  Pour voir les outils qui font partir de notre catégorie, on clique sur  outils de la catégorie.
+
+
+nouvelle_categorie9: Le processus de manipulation des outils suit une certaine logique. La logique voudrait qu'avant toute opération, pour la première utilisation surtout, il faut au préalable
+
+nouvelle_categorie10: créer ou ajouter  les différentes catégories d'outils,
+
+nouvelle_categorie11:  créer ou ajouter les différents types d'outils dont notre établissement a besoin, 
+
+nouvelle_categorie12: passer nos commandes d'outils puis les gérer convenablement.
+
+nouvelle_categorie13: La manipulation du menu service voudrait dire qu'on a déjà créé notre établissement et mit en relation avec son   parent dont il dépend et ses enfants qui dépendent de lui.  Mais fonction tout cela ?
+
+nouvelle_categorie14:
+
+nouvelle_categorie15:
+
+nouvelle_categorie16:
+
+nouvelle_categorie17:
+
+nouvelle_categorie18:
+
+nouvelle_categorie19:
+
+nouvelle_categorie20:
+
+nouvelle_categorie21:
+
+nouvelle_categorie22:
+
+nouvelle_categorie23:
+
+nouvelle_categorie24:
+
+nouvelle_categorie25:
+
+nouvelle_categorie26:
+
+nouvelle_categorie27:
+
+
+
+#nouvel_outil
+nouvel_outil0: Gestion des Outils
+
+nouvel_outil1: Comment créer ou ajouter un nouvel  outil ?
+
+nouvel_outil2: Comme la création d'une nouvellle Catégorie, le processus est le même. Alors pour créer ou ajouter un nouvel outil, on fait passer la souris sous le menu déroulant Administration puis on clique sur Gestion des outils.
+
+nouvel_outil3: Ensuite sur la page qui s'affiche, en descendant jusqu'en bas à gauche, on clique sur créer une nouvelle entrée (create new entry)
+
+nouvel_outil4: En cliquant sur ce lien, on obtient la page qui nous  permet de créer un nouvel outil
+
+nouvel_outil5: On renseigne les différents champs puis on valide en cliquant sur créer (create). Notre nouvel outil est ainsi créée   rendons-nous sur la liste des outils pour  le voir figurée à la dernière ligne des Outils.
+
+nouvel_outil6: Pour supprimer un Outil on va à la liste des Outils puis sur l'outil en question à droite on clique sur Voir (show), puis sur effacer (delete)
+
+nouvel_outil7: Pour modifier un outil
+
+nouvel_outil8:  Etant sur la page de suppression on peut directement modifier un outil en cliquant sur éditer (edit) ou on va à la liste des outils puis sur l'outil en question à droite on clique sur éditer (edit).
+
+nouvel_outil9: Comment supprimer un outil?
+
+nouvel_outil10:
+
+nouvel_outil11:
+
+nouvel_outil12:
+
+nouvel_outil13:
+
+nouvel_outil14:
+
+nouvel_outil15:
+
+nouvel_outil16:
+
+nouvel_outil17:
+
+nouvel_outil18:
+
+nouvel_outil19:
+
+nouvel_outil20:
+
+nouvel_outil21:
+
+nouvel_outil22:
+
+nouvel_outil23:
+
+nouvel_outil24:
+
+nouvel_outil25:
+
+nouvel_outil26:
+
+nouvel_outil27:
+
+
+#nouvelEts
+nouvelEts0: Gestion des Ets
+
+nouvelEts1: Comment créer ou ajouter un nouvel  établissement ?
+
+nouvelEts2: Le processus est le même. On fait passer la souris sur le menu déroulant Administration puis on clique sur Gestion des Ets.
+
+nouvelEts3: Ensuite sur la page qui s'affiche, en descendant jusqu'en bas à gauche, on clique sur créer une nouvelle entrée (create new entry)
+
+nouvelEts4: En cliquant sur ce lien, on obtient la page qui nous  permet de créer un nouvel Etablissement
+
+
+nouvelEts5: On renseigne les différents champs puis on valide en cliquant sur créer (create). Notre nouvel Etablissement est ainsi créé rendons-nous sur la liste des Etablissements pour  le voir figuré à la dernière ligne des Etablissements. 
+
+nouvelEts6: Pour supprimer un Etablissement on va à la liste des Etablissementss puis sur i'Etablissement  en question à droite, on clique sur Voir (show), puis sur effacer (delete)
+
+nouvelEts7: Pour modifier les paramètres d'un  Etablissement 
+
+nouvelEts8:  Etant sur la page de suppression on peut directement procéder à la modification d'un Etablissement en cliquant sur éditer (edit) ou on va à la liste des Etablissements puis sur l'Etablissement en question à droite on clique sur éditer (edit).
+
+nouvelEts9: Comment suprimer un Ets
+
+nouvelEts10:
+
+nouvelEts11:
+
+nouvelEts12:
+
+nouvelEts13:
+
+nouvelEts14:
+
+nouvelEts15:
+
+nouvelEts16:
+
+nouvelEts17:
+
+nouvelEts18:
+
+nouvelEts19:
+
+nouvelEts20:
+
+nouvelEts21:
+
+nouvelEts22:
+
+nouvelEts23:
+
+nouvelEts24:
+
+nouvelEts25:
+
+nouvelEts26:
+
+nouvelEts27:
+
+
+
+
+#commandeOutil
+commandeOutil0: Commande d'Outil
+
+commandeOutil1: Comment passer une commande d'outils ?
+
+commandeOutil2: Pour passer une commande d'outil, on se rend sur le menu Services. Sur la liste déroulante, on clique sur Commande d'outils
+
+commandeOutil3:  Après avoir cliqué sur Commande d'outils on accède à la page des entrepôts d'outils de collecte. Cette page est composée de deux parties qui sont :
+
+commandeOutil4: PASSER COMMANDE,
+
+commandeOutil5: PANIER, 
+
+commandeOutil6: PASSER COMMANDE est constitué d'un bloc permettant de sélectionner les différents outils dont on a besoin.  Tandis que PANIER permet de sélectionner le site chez qui nous voudrions passer notre commande.
+
+
+commandeOutil7: Votre panier est actuelement vide.
+
+commandeOutil8:
+
+commandeOutil9:
+
+commandeOutil10:
+
+commandeOutil11:
+
+commandeOutil12:
+
+commandeOutil13:
+
+commandeOutil14:
+
+commandeOutil15:
+
+commandeOutil16:
+
+commandeOutil17:
+
+commandeOutil18:
+
+commandeOutil19:
+
+commandeOutil20:
+
+commandeOutil21:
+
+commandeOutil22:
+
+commandeOutil23:
+
+commandeOutil24:
+
+commandeOutil25:
+
+commandeOutil26:
+
+commandeOutil27:
+
+
+
+#receptionOoutil
+receptionOoutil0:
+
+receptionOoutil1:
+
+receptionOoutil2:
+
+receptionOoutil3:
+
+receptionOoutil4:
+
+receptionOoutil5:
+
+receptionOoutil6:
+
+receptionOoutil7:
+
+receptionOoutil8:
+
+receptionOoutil9:
+
+receptionOoutil10:
+
+receptionOoutil11:
+
+receptionOoutil12:
+
+receptionOoutil13:
+
+receptionOoutil14:
+
+receptionOoutil15:
+
+receptionOoutil16:
+
+receptionOoutil17:
+
+receptionOoutil18:
+
+receptionOoutil19:
+
+receptionOoutil20:
+
+receptionOoutil21:
+
+receptionOoutil22:
+
+receptionOoutil23:
+
+receptionOoutil24:
+
+receptionOoutil25:
+
+receptionOoutil26:
+
+receptionOoutil27:
+
+
+
+#livraisonOutil
+livraisonOutil0:
+
+livraisonOutil1:
+
+livraisonOutil2:
+
+livraisonOutil3:
+
+livraisonOutil4:
+
+livraisonOutil5:
+
+livraisonOutil6:
+
+livraisonOutil7:
+
+livraisonOutil8:
+
+livraisonOutil9:
+
+livraisonOutil10:
+
+livraisonOutil11:
+
+livraisonOutil12:
+
+livraisonOutil13:
+
+livraisonOutil14:
+
+livraisonOutil15:
+
+livraisonOutil16:
+
+livraisonOutil17:
+
+livraisonOutil18:
+
+livraisonOutil19:
+
+livraisonOutil20:
+
+livraisonOutil21:
+
+livraisonOutil22:
+
+livraisonOutil23:
+
+livraisonOutil24:
+
+livraisonOutil25:
+
+livraisonOutil26:
+
+livraisonOutil27:
+
+
+#Rapport
+
+rapport1: Liste des opérations
+rapport2: Identifiant #user id
+rapport3: Etablissement #toutes infos sur l'unité d'organisation
+rapport4: Status #commande ou reception
+rapport5: Evenements # succès, en cours ou echec
+rapport6: Date  #date debut et date fin
+rapport7: Details
+rapport8: Produits
+rapport9:
+
+
+#CartControler
+
+form1.product: Quantité
+form1.product: Produit

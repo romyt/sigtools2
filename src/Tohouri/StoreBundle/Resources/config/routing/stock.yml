@@ -1,0 +1,30 @@
+stock:
+    pattern:  /
+    defaults: { _controller: "TohouriStoreBundle:Stock:index" }
+
+stock_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TohouriStoreBundle:Stock:show" }
+
+stock_new:
+    pattern:  /new
+    defaults: { _controller: "TohouriStoreBundle:Stock:new" }
+
+stock_create:
+    pattern:  /create
+    defaults: { _controller: "TohouriStoreBundle:Stock:create" }
+    requirements: { _method: post }
+
+stock_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TohouriStoreBundle:Stock:edit" }
+
+stock_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TohouriStoreBundle:Stock:update" }
+    requirements: { _method: post }
+
+stock_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TohouriStoreBundle:Stock:delete" }
+    requirements: { _method: post }

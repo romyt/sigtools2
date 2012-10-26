@@ -33,7 +33,7 @@ use Tohouri\StoreBundle\Entity\CartOrder;
 use Tohouri\StoreBundle\Entity\OrganisationUnit;
 use Tohouri\StoreBundle\Entity\Shipping;
 use Tohouri\StoreBundle\Form\StockType;
-use Tohouri\StoreBundle\Form\OrganisationUnitType;
+use Tohouri\StoreBundle\Form\Type\OrganisationUnitType;
 
 /**
  * Cart controller.
@@ -124,8 +124,9 @@ class CartController extends Controller
 				{
 					// taking selected Product Id to retreave the related stock instance
 					$qty = $stock->getQuantity();
-					$product = $stock->getProduct();
-					$stock = $em->getRepository('TohouriStoreBundle:Stock')->findOneBy( array('product'=>$product->getId()) );
+					//$product = $stock->getProduct();
+					
+					$stock = $em->getRepository('TohouriStoreBundle:Stock')->findOneBy( array('product'=>$stock->getProduct()->getId()) );
 					$products = $em->getRepository('TohouriStoreBundle:Product')->findAll();
 
 					if (!$stock) 
@@ -135,7 +136,7 @@ class CartController extends Controller
 
 					 $cart->addItem($product->getId(), $qty);
 
-					return $this->render('TohouriStoreBundle:Cart:index.html.twig', array(
+					 return $this->render('TohouriStoreBundle:Cart:index.html.twig', array(
 				      'products' => $products,
 				      'cart' => $cart->getSessionCart(),
 					  'form1' => $form1->createView(),

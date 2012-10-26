@@ -1,0 +1,61 @@
+{% extends "TohouriStoreBundle::layout.html.twig" %}
+
+{% block title %}Aide{% endblock %}
+
+{% block left %}
+
+{% endblock %}
+
+{% block body %}
+
+        <a href="{{ path('TohouriStoreBundle_aide_premiereUtilisation') }}" title="{{ "premiere_utilisation" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-5.png')}}" width="60px" height="30px">
+        </a>
+	
+ <a href="{{ path('TohouriStoreBundle_aide_pageAccueil') }}" title="{{ "page_accueil" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-6.png')}}" width="60px" height="30px" align="right">
+        </a>
+<fieldset> 
+     <legend align="center"><h1>{{ "phase_authentification" | trans }} </h1></legend>
+	 
+
+     <table class="di">
+	 <tr class="di">
+	 <td class="di">
+<h3><u><b>Remarque importante :</b></u></h3>
+
+{{ "phase_authentification1" | trans }}</br></br>
+{{ "phase_authentification2" | trans }}
+
+<h4><b>{{ "phase_authentification3" | trans }} </b></h4>
+<ul>
+   <li><img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. Internet explorer ;</li>
+   <li><img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. Mozilla firerfoxe ;</li>
+   <li><img src="{{ asset('bundles/tohouristore/images/opensource/edit-redo-3.png')}}">. Google Chrome ;</li>
+</ul>
+	{{ "phase_authentification4" | trans }}</br></br>
+	
+    <div align="center"><img src="{{ asset('bundles/tohouristore/images/img/login.JPG')}}"></div> </br>
+	
+    {{ "phase_authentification5" | trans }}</br></br>
+    
+	<div align="center"><img src="{{ asset('bundles/tohouristore/images/img/saisielogin.JPG')}}"></div> </br>
+
+
+    </td>
+	</tr>
+	</table>
+
+</fieldset>
+
+        <a href="{{ path('TohouriStoreBundle_aide_premiereUtilisation') }}" title="{{ "premiere_utilisation" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-5.png')}}" width="60px" height="30px">
+        </a>
+	
+ <a href="{{ path('TohouriStoreBundle_aide_pageAccueil') }}" title="{{ "page_accueil" | trans }}">
+            <img src="{{asset('bundles/tohouristore/images/opensource/go-bottom-6.png')}}" width="60px" height="30px" align="right">
+        </a>
+{% endblock %}
+{% block right %}
+
+{% endblock %}

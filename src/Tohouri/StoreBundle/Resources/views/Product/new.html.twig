@@ -4,20 +4,65 @@
 
 {% block body %}
 
-<h1>Ajouter un Produit</h1>
+<fieldset> 
+     <legend align="center"><h1>{{ "nouveau_produit" | trans }}</h1></legend>
 
+<div align="center">
 <form action="{{ path('TohouriStoreBundle_product_create') }}" method="post" {{ form_enctype(form) }}>
-    {{ form_widget(form) }}
+
+      <table class="tabledim">
+      
+	  <tr class="couleur">
+        <td class="couleur">{{ form_label(form.name) }}</td>
+		<td class="couleur">{{ form_errors(form.name) }}
+                            {{ form_widget(form.name) }}
+	    </td>
+	  </tr>
+	  <tr class="couleur">
+        <td class="couleur">{{ form_label(form.code) }}</td>
+        <td class="couleur">{{ form_errors(form.code) }}
+                            {{ form_widget(form.code) }}
+		</td>
+	  </tr>
+	  <tr class="couleur">
+        <td class="couleur">{{ form_label(form.description) }}</td>
+		<td class="couleur">{{ form_errors(form.description) }}
+                            {{ form_widget(form.description) }}
+	    </td>
+	  </tr>
+	  </tr>
+	  <tr class="couleur">
+        <td class="couleur">{{ form_label(form.price) }}</td>
+		<td class="couleur">{{ form_errors(form.price) }}
+                            {{ form_widget(form.price) }}
+	    </td>
+	  </tr>
+	   <tr class="couleur">
+        <td class="couleur">{{ form_label(form.category) }}</td>
+		<td class="couleur">{{ form_errors(form.category) }}
+                            {{ form_widget(form.category) }}
+	    </td>
+	  </tr>
+  </table>
+  
+       {{ form_rest(form) }}
     <p>
-        <button type="submit">Create</button>
+        <button type="submit">{{ "creer_entite" | trans }}</button>
     </p>
 </form>
+</div>
+
+</fieldset>
 
 <ul class="record_actions">
     <li>
         <a href="{{ path('TohouriStoreBundle_product') }}">
-            Back to the list
+            <button type="submit">{{ "retour_list" | trans }}</button>
         </a>
+		<div align="right"><a href="{{ path('TohouriStoreBundle_category') }}">
+                        <button type="submit">{{ "retour_categorie" | trans }}</button>
+            </a>
+		</div>
     </li>
 </ul>
 {% endblock %}

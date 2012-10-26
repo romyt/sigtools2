@@ -24,11 +24,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Tohouri\StoreBundle\Entity\Stock;
-//use Tohouri\StoreBundle\Entity\Product;
-//use Tohouri\StoreBundle\Entity\Category;
-use Tohouri\StoreBundle\Form\StockType;
-//use Tohouri\StoreBundle\Form\ProductType;
-//use Tohouri\StoreBundle\Form\CategoryType;
+use Tohouri\StoreBundle\Form\Type\StockType;
+
 
 /**
  * Stock controller.

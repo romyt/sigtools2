@@ -13,9 +13,11 @@ security:
                 check_path:     /login_check
                 failure_path:   null
                 default_target_path: /
+            
             logout:
                 path:   /logout
                 target: /
+
             anonymous:    true
 
     role_hierarchy:
@@ -25,7 +27,7 @@ security:
     access_control:
         # Liste des pages accessibles à tous les utilisateurs (ne pas toucher)
         - { path: ^/_wdt/, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/_profiler/, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^_profiler/, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/js/, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/css/, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }

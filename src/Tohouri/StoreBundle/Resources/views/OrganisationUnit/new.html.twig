@@ -4,19 +4,53 @@
 
 {% block body %}
 
-<h1>OrganisationUnit creation</h1>
+<fieldset> 
+     <legend align="center"><h1>{{ "orgaunit_create" | trans }}</h1></legend>
 
+<div align="center">
 <form action="{{ path('TohouriStoreBundle_orgunit_create') }}" method="post" {{ form_enctype(form) }}>
-    {{ form_widget(form) }}
+      <table class="tabledim">
+      
+	  <tr class="couleur">
+        <td class="couleur">{{ form_label(form.name) }}</td>
+		<td class="couleur">{{ form_errors(form.name) }}
+                            {{ form_widget(form.name) }}
+	    </td>
+	  </tr>
+	  <tr class="couleur">
+        <td class="couleur">{{ form_label(form.address) }}</td>
+        <td class="couleur">{{ form_errors(form.address) }}
+                            {{ form_widget(form.address) }}
+		</td>
+	  </tr>
+	  <tr class="couleur">
+        <td class="couleur">{{ form_label(form.parent) }}</td>
+		<td class="couleur">{{ form_errors(form.parent) }}
+                            {{ form_widget(form.parent) }}
+	    </td>
+	  </tr>
+	  </tr>
+	  <tr class="couleur">
+        <td class="couleur">{{ form_label(form.children) }}</td>
+		<td class="couleur">{{ form_errors(form.children) }}
+                            {{ form_widget(form.children) }}
+	    </td>
+	  </tr>
+  </table>
+      
+	  {{ form_rest(form) }}
     <p>
-        <button type="submit">Create</button>
+        <button type="submit">{{ "creer_entite" | trans }}</button>
     </p>
 </form>
+</div>
+
+</fieldset>
 
 <ul class="record_actions">
     <li>
         <a href="{{ path('TohouriStoreBundle_orgunit') }}">
-            Back to the list
+            <button type="submit">{{ "retour" | trans }}{{ entity.name }}</button>
         </a>
     </li>
 </ul>

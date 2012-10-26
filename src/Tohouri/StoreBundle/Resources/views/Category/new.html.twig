@@ -4,25 +4,49 @@
 
 {% block body %}
 
-<h1>Ajouter une nouvelle catégorie</h1>
+<fieldset> 
+     <legend align="center"><h1>{{ "nouvelle_categorie" | trans }}</h1></legend>
 
-{% if app.session.hasFlash('notice') %}
-<div class="flash-notice">
-{{ app.session.flash('notice') }}	
-</div>
-{% endif %}
+            {% if app.session.flash('notice') %}
+                <div class="flash-message">
+                   <h6 font-color="red"> <em>Notice</em>: {{ app.session.flash('notice') }}</h6>
+                </div>
+            {% endif %}
 
+<div align="center">
 <form action="{{ path('TohouriStoreBundle_category_new') }}" method="post" {{ form_enctype(form) }}>
-    {{ form_widget(form) }}
+       <table class="tabledim">
+      
+	  <tr class="couleur">
+        <td class="couleur">{{ form_label(form.name) }}</td>
+		<td class="couleur">{{ form_errors(form.name) }}
+                            {{ form_widget(form.name) }}
+	    </td>
+	  </tr>
+	  <tr class="couleur">
+        <td class="couleur">{{ form_label(form.description) }}</td>
+        <td class="couleur">{{ form_errors(form.description) }}
+                            {{ form_widget(form.description) }}
+		</td>
+	  </tr>
+  </table>
+  
+          {{ form_rest(form) }}
     <p>
         <button type="submit">Create</button>
     </p>
 </form>
+</div>
+
+	        <div>
+
+
+</fieldset>
 
 <ul class="record_actions">
     <li>
         <a href="{{ path('TohouriStoreBundle_category') }}">
-            Back to the list
+          <button type="submit">{{ "retour" | trans }}</button>
         </a>
     </li>
 </ul>

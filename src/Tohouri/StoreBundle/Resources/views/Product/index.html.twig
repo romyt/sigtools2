@@ -4,23 +4,25 @@
 
 {% block body %}
 
-<h1>Liste des produits</h1>
+<fieldset> 
+     <legend align="center"><h1>{{ "list_produit" | trans }}</h1></legend>
 
-{% if app.session.hasFlash('notice') %}
-<div class="flash-notice">
-{{ app.session.flash('notice') }}	
-</div>
-{% endif %}
+	 
+	             {% if app.session.flash('notice') %}
+                <div class="flash-message">
+                   <h6 font-color="red"> <em>Notice</em>: {{ app.session.flash('notice') }}</h6>
+                </div>
+            {% endif %}
 
 <table class="records_list">
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Code</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Actions</th>
+            <th>{{ "id" | trans }}</th>
+            <th>{{ "name" | trans }}</th>
+            <th>{{ "code" | trans }}</th>
+            <th>{{ "description" | trans }}</th>
+            <th>{{ "price" | trans }}</th>
+            <th>{{ "action" | trans }}</th>
         </tr>
     </thead>
     <tbody>
@@ -34,10 +36,10 @@
             <td>
                 <ul>
                     <li>
-                        <a href="{{ path('TohouriStoreBundle_product_show', { 'id': product.id }) }}">show</a>
+                        <a href="{{ path('TohouriStoreBundle_product_show', { 'id': product.id }) }}">{{ "montrer" | trans }}</a>
                     </li>
                     <li>
-                        <a href="{{ path('TohouriStoreBundle_product_edit', { 'id': product.id }) }}">edit</a>
+                        <a href="{{ path('TohouriStoreBundle_product_edit', { 'id': product.id }) }}">{{ "editer" | trans }}</a>
                     </li>
                 </ul>
             </td>
@@ -45,11 +47,12 @@
     {% endfor %}
     </tbody>
 </table>
+</fieldset>
 
 <ul>
     <li>
         <a href="{{ path('TohouriStoreBundle_product_new') }}">
-            Create a new entry
+            <button type="submit">{{ "creer_entite" | trans }}</button>
         </a>
     </li>
 </ul>

@@ -20,6 +20,7 @@ namespace Tohouri\UsersBundle\Entity;
 use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Tohouri\StoreBundle\Entity\OrganisationUnit;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Tohouri\UsersBundle\Entity\User
@@ -37,13 +38,24 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-	
-  protected $name;
+
+   /**
+     * @ORM\Column(type="string", length="255")
+     *
+     * @Assert\NotBlank(message="Please enter your name.", groups={"Registration", "Profile"})
+     * @Assert\MinLength(limit="3", message="The name is too short.", groups={"Registration", "Profile"})
+     * @Assert\MaxLength(limit="255", message="The name is too long.", groups={"Registration", "Profile"})
+     */
+    protected $name;	
 
     /**
      * @var string $firstname
      *
-     * @ORM\Column(name="firstname", type="string", length=32)
+     * @ORM\Column(name="firstname", type="string", length=255)
+	 *
+	 * @Assert\NotBlank(message="Please enter your firstname.", groups={"Registration", "Profile"})
+     * @Assert\MinLength(limit="3", message="The name is too short.", groups={"Registration", "Profile"})
+     * @Assert\MaxLength(limit="255", message="The name is too long.", groups={"Registration", "Profile"})
      */
     protected $firstname;	
 
@@ -53,13 +65,6 @@ class User extends BaseUser
 	 *
 	 */
 	protected $country;
-
-	/**
-	 *
-     * @ORM\Column(name="region", type="string", length=255)
-	 *
-	 */
-	protected $region;
 
 	/**
 	 *
@@ -81,11 +86,13 @@ class User extends BaseUser
     protected $tel;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Tohouri\StoreBundle\Entity\OrganisationUnit", inversedBy="users")
-     * @ORM\JoinTable(name="user_organisationunits")
+     * @ORM\ManyToMany(targetEntity="Tohouri\StoreBundle\Entity\OrganisationUnit")
+     * @ORM\JoinTable(name="user_organisationunits",	
+	 * 		joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
+	 *      inverseJoinColumns={@ORM\JoinColumn(name="organisationunit_id", referencedColumnName="id", unique=true)})
      */
 	private $organisationunits;
-	
+		
 	
 	public function __toString()
 	{
@@ -95,7 +102,7 @@ class User extends BaseUser
     public function __construct()
     {
         parent::__construct();
-		$this->organisationunits = new \Doctrine\Common\Collections\ArrayCollecton();
+		$this->organisationunits = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -168,25 +175,6 @@ class User extends BaseUser
         return $this->country;
     }
 
-    /**
-     * Set region
-     *
-     * @param string $region
-     */
-    public function setRegion($region)
-    {
-        $this->region = $region;
-    }
-
-    /**
-     * Get region
-     *
-     * @return string 
-     */
-    public function getRegion()
-    {
-        return $this->region;
-    }
 
     /**
      * Set city

@@ -1,0 +1,19 @@
+{% extends "TohouriStoreBundle::layout.html.twig" %}
+
+{% block title %}Resumé des operations mensuelles{% endblock %}
+
+{% block body %}
+
+<fieldset> 
+     <legend align="center"><h1>Resumé des differentes opérations </h1></legend>
+
+
+</fieldset>
+<ul>
+    <li>
+        <a href="{{ path('TohouriStoreBundle_stock_new') }}">
+            <button type="submit">{{ "creer_entite" | trans }}</button>
+        </a>
+    </li>
+</ul>
+{% endblock %}

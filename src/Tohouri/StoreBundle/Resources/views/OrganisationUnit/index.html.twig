@@ -4,15 +4,22 @@
 
 {% block body %}
 
-<h1>Unités d'organisation</h1>
+<fieldset> 
+     <legend align="center"><h1>{{ "orgaunit" | trans }}</h1></legend>
+	 
+	             {% if app.session.flash('notice') %}
+                <div class="flash-message">
+                   <h6 font-color="red"> <em>Notice</em>: {{ app.session.flash('notice') }}</h6>
+                </div>
+            {% endif %}
 
 <table class="records_list">
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Address</th>
-            <th>Actions</th>
+            <th>{{ "id" | trans }}</th>
+            <th>{{ "name" | trans }}</th>
+            <th>{{ "adresse" | trans }}</th>
+            <th>{{ "action" | trans }}</th>
         </tr>
     </thead>
     <tbody>
@@ -24,10 +31,10 @@
             <td>
                 <ul>
                     <li>
-                        <a href="{{ path('TohouriStoreBundle_orgunit_show', { 'id': entity.id }) }}">show</a>
+                        <a href="{{ path('TohouriStoreBundle_orgunit_show', { 'id': entity.id }) }}">{{ "montrer" | trans }}</a>
                     </li>
                     <li>
-                        <a href="{{ path('TohouriStoreBundle_orgunit_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('TohouriStoreBundle_orgunit_edit', { 'id': entity.id }) }}">{{ "editer" | trans }}</a>
                     </li>
                 </ul>
             </td>
@@ -35,11 +42,13 @@
     {% endfor %}
     </tbody>
 </table>
+</fieldset>
 
 <ul>
     <li>
         <a href="{{ path('TohouriStoreBundle_orgunit_new') }}">
-            Create a new entry
+         <button type="submit">{{ "creer_entite" | trans }}</button>
+
         </a>
     </li>
 </ul>
